@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Expectation/ClassExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Expectation/ClosureExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Expectation/StringExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/DataTraveller/GetTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/ClassExpectation/ExpectTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/ClosureExpectation/ExpectTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/StringExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_css/nv.d3.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_css/octicons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_icons/file-code.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_icons/file-directory.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_js/d3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_js/file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_js/nv.d3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/_js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/NumericExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/NumericExpectation/ExpectTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571589619381</updated>
       <workItem from="1571589620533" duration="8814000" />
-      <workItem from="1571636676639" duration="5918000" />
+      <workItem from="1571636676639" duration="6353000" />
     </task>
     <servers />
   </component>

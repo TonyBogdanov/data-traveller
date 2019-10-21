@@ -117,4 +117,28 @@ class GetTest extends TestCase {
 
     }
 
+    public function testMissingDataException() {
+
+        $this->expectException( MissingDataException::class );
+
+        ( new DataTraveller() )->get( 'foo', [] );
+
+    }
+
+    public function testUnexpectedDataException() {
+
+        $this->expectException( UnexpectedDataException::class );
+
+        ( new DataTraveller() )->get( 'foo', [ 'foo' => true ], new StringExpectation() );
+
+    }
+
+    public function testInvalidPathException() {
+
+        $this->expectException( InvalidPathException::class );
+
+        ( new DataTraveller() )->get( '.foo', [] );
+
+    }
+
 }
