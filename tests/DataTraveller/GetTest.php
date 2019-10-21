@@ -16,11 +16,13 @@ use DataTraveller\Expectation\CallableExpectation;
 use DataTraveller\Expectation\ClassExpectation;
 use DataTraveller\Expectation\ClosureExpectation;
 use DataTraveller\Expectation\CountableExpectation;
+use DataTraveller\Expectation\EmptyExpectation;
 use DataTraveller\Expectation\Exceptions\MissingDataException;
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
 use DataTraveller\Expectation\FloatExpectation;
 use DataTraveller\Expectation\IntegerExpectation;
 use DataTraveller\Expectation\IterableExpectation;
+use DataTraveller\Expectation\NotExpectation;
 use DataTraveller\Expectation\NullExpectation;
 use DataTraveller\Expectation\NumericExpectation;
 use DataTraveller\Expectation\ObjectExpectation;
@@ -110,6 +112,27 @@ class GetTest extends TestCase {
                 'foo.bar',
                 [ 'foo' => [ 'bar' => $data ] ],
                 new $expectation( ...$arguments )
+
+            )
+
+        );
+
+    }
+
+    public function testMultiple() {
+
+        $traveller = new DataTraveller();
+        $data = 'baz';
+
+        $this->assertSame(
+
+            $data,
+            $traveller->get(
+
+                'foo.bar',
+                [ 'foo' => [ 'bar' => $data ] ],
+                new StringExpectation(),
+                new NotExpectation( new EmptyExpectation() )
 
             )
 
