@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class ResourceExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'resource';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class ResourceExpectation implements ExpectationInterface {
 
         if ( ! is_resource( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'resource', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

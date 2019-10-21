@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class NumericExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'numeric';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class NumericExpectation implements ExpectationInterface {
 
         if ( ! is_numeric( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'numeric', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

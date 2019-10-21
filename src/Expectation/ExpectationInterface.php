@@ -21,6 +21,11 @@ use DataTraveller\Path\Path;
 interface ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string;
+
+    /**
      * @param $data
      * @param Path|null $path
      *

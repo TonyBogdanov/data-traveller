@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class FloatExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'float';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class FloatExpectation implements ExpectationInterface {
 
         if ( ! is_float( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'float', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

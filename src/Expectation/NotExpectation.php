@@ -13,19 +13,35 @@ use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
 use DataTraveller\Path\Path;
 
 /**
- * Class CallableExpectation
+ * Class NotExpectation
  *
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class CallableExpectation implements ExpectationInterface {
+class NotExpectation implements ExpectationInterface {
+
+    /**
+     * @var ExpectationInterface
+     */
+    protected $expectation;
+
+    /**
+     * NotExpectation constructor.
+     *
+     * @param ExpectationInterface $expectation
+     */
+    public function __construct( ExpectationInterface $expectation ) {
+
+        $this->expectation = $expectation;
+
+    }
 
     /**
      * @return string
      */
     public function getType(): string {
 
-        return 'callable';
+        return sprintf( 'not(%s)', $this->expectation->getType() );
 
     }
 
@@ -38,13 +54,17 @@ class CallableExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( ! is_callable( $data ) ) {
+        try {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            $this->expectation->expect( $data, $path );
+
+        } catch ( UnexpectedDataException $e ) {
+
+            return $this;
 
         }
 
-        return $this;
+        throw new UnexpectedDataException( $data, $this->getType(), $path );
 
     }
 

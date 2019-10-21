@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class IterableExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'iterable';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class IterableExpectation implements ExpectationInterface {
 
         if ( ! is_iterable( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'iterable', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

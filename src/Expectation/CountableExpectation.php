@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class CountableExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'countable';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class CountableExpectation implements ExpectationInterface {
 
         if ( ! is_countable( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'countable', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

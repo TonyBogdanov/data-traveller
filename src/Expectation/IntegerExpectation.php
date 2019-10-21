@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class IntegerExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'integer';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class IntegerExpectation implements ExpectationInterface {
 
         if ( ! is_int( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'integer', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class ArrayExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'array';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class ArrayExpectation implements ExpectationInterface {
 
         if ( ! is_array( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'array', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

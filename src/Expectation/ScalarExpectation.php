@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class ScalarExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'scalar';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class ScalarExpectation implements ExpectationInterface {
 
         if ( ! is_scalar( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'scalar', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

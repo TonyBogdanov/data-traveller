@@ -37,6 +37,15 @@ class ClassExpectation implements ExpectationInterface {
     }
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return $this->name;
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -47,7 +56,7 @@ class ClassExpectation implements ExpectationInterface {
 
         if ( ! is_object( $data ) || ! is_a( $data, $this->name, false ) ) {
 
-            throw new UnexpectedDataException( $data, $this->name, $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

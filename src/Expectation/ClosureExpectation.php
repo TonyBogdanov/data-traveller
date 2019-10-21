@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class ClosureExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return \Closure::class;
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class ClosureExpectation implements ExpectationInterface {
 
         if ( ! is_object( $data ) || ! ( $data instanceof \Closure) ) {
 
-            throw new UnexpectedDataException( $data, \Closure::class, $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

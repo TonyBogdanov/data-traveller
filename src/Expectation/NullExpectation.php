@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class NullExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'null';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class NullExpectation implements ExpectationInterface {
 
         if ( ! is_null( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'null', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

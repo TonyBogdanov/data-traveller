@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class StringExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'string';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class StringExpectation implements ExpectationInterface {
 
         if ( ! is_string( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'string', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 

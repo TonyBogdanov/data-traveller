@@ -13,19 +13,19 @@ use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
 use DataTraveller\Path\Path;
 
 /**
- * Class CallableExpectation
+ * Class EmptyExpectation
  *
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class CallableExpectation implements ExpectationInterface {
+class EmptyExpectation implements ExpectationInterface {
 
     /**
      * @return string
      */
     public function getType(): string {
 
-        return 'callable';
+        return 'empty';
 
     }
 
@@ -38,7 +38,7 @@ class CallableExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( ! is_callable( $data ) ) {
+        if ( ! empty( $data ) ) {
 
             throw new UnexpectedDataException( $data, $this->getType(), $path );
 

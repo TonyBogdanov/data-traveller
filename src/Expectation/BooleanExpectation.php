@@ -21,6 +21,15 @@ use DataTraveller\Path\Path;
 class BooleanExpectation implements ExpectationInterface {
 
     /**
+     * @return string
+     */
+    public function getType(): string {
+
+        return 'boolean';
+
+    }
+
+    /**
      * @param $data
      * @param Path|null $path
      *
@@ -31,7 +40,7 @@ class BooleanExpectation implements ExpectationInterface {
 
         if ( ! is_bool( $data ) ) {
 
-            throw new UnexpectedDataException( $data, 'boolean', $path );
+            throw new UnexpectedDataException( $data, $this->getType(), $path );
 
         }
 
