@@ -43,11 +43,11 @@ class LiteralStep implements StepInterface {
     }
 
     /**
-     * @param $key
+     * @param string $key
      *
      * @return bool
      */
-    public function expect( $key ): bool {
+    public function expect( string $key ): bool {
 
         return $key === $this->value;
 

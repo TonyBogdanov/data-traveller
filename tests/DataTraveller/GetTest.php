@@ -140,6 +140,66 @@ class GetTest extends TestCase {
 
     }
 
+    public function testNumberInPath() {
+
+        $traveller = new DataTraveller();
+        $data = 'baz';
+
+        $this->assertSame(
+
+            $data,
+            $traveller->get(
+
+                'foo.bar.1',
+                [ 'foo' => [ 'bar' => [ 'zero', $data ] ] ],
+                new StringExpectation()
+
+            )
+
+        );
+
+    }
+
+    public function testRegexInPath() {
+
+        $traveller = new DataTraveller();
+        $data = 'hello';
+
+        $this->assertSame(
+
+            $data,
+            $traveller->get(
+
+                'foo./^b[a-z]r$/.baz',
+                [ 'foo' => [ 'bar' => [ 'baz' => $data ] ] ],
+                new StringExpectation()
+
+            )
+
+        );
+
+    }
+
+    public function testNumberRegexInPath() {
+
+        $traveller = new DataTraveller();
+        $data = 'baz';
+
+        $this->assertSame(
+
+            $data,
+            $traveller->get(
+
+                'foo.bar./^\d+$/',
+                [ 'foo' => [ 'bar' => [ $data, 'one' ] ] ],
+                new StringExpectation()
+
+            )
+
+        );
+
+    }
+
     public function testMissingDataException() {
 
         $this->expectException( MissingDataException::class );

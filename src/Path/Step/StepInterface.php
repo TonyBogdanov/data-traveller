@@ -23,10 +23,10 @@ interface StepInterface {
     public function __toString(): string;
 
     /**
-     * @param $key
+     * @param string $key
      *
      * @return bool
      */
-    public function expect( $key ): bool;
+    public function expect( string $key ): bool;
 
 }
