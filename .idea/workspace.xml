@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Path/Step/LiteralStep.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/Step/LiteralStep.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Path/Step/RegexStep.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/Step/RegexStep.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Path/Step/StepInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/Step/StepInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DataTraveller/GetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DataTraveller/GetTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +13,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -118,6 +121,7 @@
       <updated>1571589619381</updated>
       <workItem from="1571589620533" duration="8814000" />
       <workItem from="1571636676639" duration="8866000" />
+      <workItem from="1571998410442" duration="262000" />
     </task>
     <servers />
   </component>

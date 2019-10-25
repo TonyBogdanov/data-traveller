@@ -43,11 +43,11 @@ class RegexStep implements StepInterface {
     }
 
     /**
-     * @param $key
+     * @param string $key
      *
      * @return bool
      */
-    public function expect( $key ): bool {
+    public function expect( string $key ): bool {
 
         if ( ! is_string( $key ) ) {
 
