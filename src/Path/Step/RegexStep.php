@@ -49,12 +49,6 @@ class RegexStep implements StepInterface {
      */
     public function expect( string $key ): bool {
 
-        if ( ! is_string( $key ) ) {
-
-            return false;
-
-        }
-
         return preg_match( $this->regex, $key );
 
     }
