@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Path/Step/LiteralStep.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/Step/LiteralStep.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Expectation/RegexExpectation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Expectation/RegexExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Path/Step/RegexStep.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/Step/RegexStep.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Path/Step/StepInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Path/Step/StepInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DataTraveller/GetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DataTraveller/GetTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Path/Step/RegexStep/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Path/Step/RegexStep/ExpectTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,16 +80,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
-      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\data-traveller\tests\Expectation" />
       <recent name="C:\Dev\data-traveller\src\Expectation" />
       <recent name="C:\Dev\data-traveller\tests\DataTraveller" />
       <recent name="C:\Dev\data-traveller\tests\Expectation\NullExpectation" />
       <recent name="C:\Dev\data-traveller\tests\Path\Path" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
+      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -121,7 +122,7 @@
       <updated>1571589619381</updated>
       <workItem from="1571589620533" duration="8814000" />
       <workItem from="1571636676639" duration="8866000" />
-      <workItem from="1571998410442" duration="262000" />
+      <workItem from="1571998410442" duration="993000" />
     </task>
     <servers />
   </component>

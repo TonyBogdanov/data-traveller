@@ -31,6 +31,7 @@ class ExpectTest extends TestCase {
         $this->assertFalse( $step->expect( 'teeest' ) );
         $this->assertFalse( $step->expect( 'toast' ) );
 
+        $this->assertFalse( $step->expect( '1' ) );
         $this->assertFalse( $step->expect( 1 ) );
 
     }
