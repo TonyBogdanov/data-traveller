@@ -19,7 +19,7 @@ use DataTraveller\Path\Step\LiteralStep;
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class ListExpectation extends ArrayExpectation {
+class ListExpectation extends IndexedArrayExpectation {
 
     /**
      * @var ExpectationInterface
