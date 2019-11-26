@@ -41,18 +41,26 @@ class UnexpectedDataException extends \Exception {
      *
      * @param $data
      * @param string $expected
-     * @param Path $path
+     * @param Path|null $path
+     * @param UnexpectedDataException|null $previous
      */
-    public function __construct( $data, string $expected, Path $path = null ) {
+    public function __construct(
+
+        $data,
+        string $expected,
+        Path $path = null,
+        UnexpectedDataException $previous = null
+
+    ) {
 
         parent::__construct( sprintf(
 
             'Unexpected data: %1$s, expected: %2$s%3$s.',
             $this->format( $data ),
             $expected,
-            $path ? sprintf( ' at: %1$s', $path ) : ''
+            $path ? sprintf( ' at: %1$s', $path ) : '',
 
-        ) );
+        ), 0, $previous );
 
     }
 

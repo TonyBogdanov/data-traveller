@@ -80,6 +80,18 @@ class Path {
 
     }
 
+    public function __clone() {
+
+        $this->steps = array_map( function ( StepInterface $step ) {
+
+            return clone $step;
+
+        }, $this->steps );
+
+        $this->arrayExpectation = clone $this->arrayExpectation;
+
+    }
+
     /**
      * @param $data
      * @param Path|null $trail
