@@ -42,9 +42,9 @@ class ValueExpectation implements ExpectationInterface {
     public function getType(): string {
 
         $expression = serialize( $this->value );
-        if ( 50 < strlen( $expression ) ) {
+        if ( 200 < strlen( $expression ) ) {
 
-            $expression = substr( $expression, 0, 50 ) . '...';
+            $expression = substr( $expression, 0, 200 ) . '...';
 
         }
 

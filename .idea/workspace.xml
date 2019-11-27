@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/ValueExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ValueExpectation.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +123,7 @@
       <workItem from="1574799109941" duration="4104000" />
       <workItem from="1574804041100" duration="607000" />
       <workItem from="1574852855316" duration="1187000" />
-      <workItem from="1574855176303" duration="1938000" />
+      <workItem from="1574855176303" duration="2392000" />
     </task>
     <servers />
   </component>
