@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/DataTraveller.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTraveller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DataTraveller/GetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DataTraveller/GetTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,16 +78,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
-      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\data-traveller\tests\Expectation" />
       <recent name="C:\Dev\data-traveller\src\Expectation" />
       <recent name="C:\Dev\data-traveller\tests\Path\Path" />
       <recent name="C:\Dev\data-traveller\tests\DataTraveller" />
       <recent name="C:\Dev\data-traveller\tests\Expectation\NullExpectation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
+      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -123,6 +124,7 @@
       <workItem from="1574799109941" duration="4104000" />
       <workItem from="1574804041100" duration="607000" />
       <workItem from="1574852855316" duration="1187000" />
+      <workItem from="1574855176303" duration="1938000" />
     </task>
     <servers />
   </component>
