@@ -24,7 +24,7 @@ class MapExpectation extends AssociativeArrayExpectation {
     /**
      * @var ExpectationInterface[]
      */
-    protected $expectations = [];
+    protected $expectations;
 
     /**
      * MapExpectation constructor.
