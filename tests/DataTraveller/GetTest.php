@@ -10,6 +10,7 @@
 namespace Tests\DataTraveller\DataTraveller;
 
 use DataTraveller\DataTraveller;
+use DataTraveller\Expectation\AndExpectation;
 use DataTraveller\Expectation\ArrayExpectation;
 use DataTraveller\Expectation\BooleanExpectation;
 use DataTraveller\Expectation\CallableExpectation;
@@ -131,8 +132,12 @@ class GetTest extends TestCase {
 
                 'foo.bar',
                 [ 'foo' => [ 'bar' => $data ] ],
-                new StringExpectation(),
-                new NotExpectation( new EmptyExpectation() )
+                new AndExpectation(
+
+                    new StringExpectation(),
+                    new NotExpectation( new EmptyExpectation() )
+
+                )
 
             )
 

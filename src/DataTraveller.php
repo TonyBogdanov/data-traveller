@@ -26,22 +26,22 @@ class DataTraveller {
     /**
      * @param string $path
      * @param $data
-     * @param ExpectationInterface ...$expectations
+     * @param ExpectationInterface $expectation
      *
      * @return mixed
      * @throws InvalidPathException
      * @throws MissingDataException
      * @throws UnexpectedDataException
      */
-    public function get( string $path, $data, ExpectationInterface ...$expectations ) {
+    public function get( string $path, $data, ExpectationInterface $expectation = null ) {
 
         $path = Path::parse( $path );
         $value = $path->get( $data, new Path() );
 
-        foreach ( $expectations as $expectation ) {
+        if ( isset( $expectation ) ) {
 
             $expectation->expect( $value, $path );
-
+            
         }
 
         return $value;
