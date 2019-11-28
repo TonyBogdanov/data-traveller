@@ -32,7 +32,7 @@ class EnumExpectation implements ExpectationInterface {
      */
     public function __construct( array $options ) {
 
-        $this->options = $options;
+        $this->options = array_values( $options );
 
     }
 
@@ -41,7 +41,13 @@ class EnumExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'enum<' . implode( ',', $this->options ) . '>';
+        return 'enum<' .
+            implode( ',', array_map( function ( $value ) {
+
+                return json_encode( $value );
+
+            }, $this->options ) ) .
+            '>';
 
     }
 
