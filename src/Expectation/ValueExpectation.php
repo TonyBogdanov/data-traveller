@@ -23,7 +23,7 @@ class ValueExpectation implements ExpectationInterface {
     /**
      * @var mixed
      */
-    protected $value;
+    public $value;
 
     /**
      * ValueExpectation constructor.
@@ -41,7 +41,21 @@ class ValueExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        $expression = serialize( $this->value );
+        switch ( true ) {
+
+            case is_float( $this->value ) && is_infinite( $this->value ):
+                $expression = 'INF';
+                break;
+
+            case $this->value instanceof \Closure:
+                $expression = \Closure::class;
+                break;
+
+            default:
+                $expression = json_encode( $this->value );
+
+        }
+
         if ( 200 < strlen( $expression ) ) {
 
             $expression = substr( $expression, 0, 200 ) . '...';

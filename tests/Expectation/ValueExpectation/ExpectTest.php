@@ -57,6 +57,20 @@ class ExpectTest extends TestCase {
 
     }
 
+    public function testINF() {
+
+        $expectation = new ValueExpectation( INF );
+        $this->assertEquals( $expectation, $expectation->expect( INF ) );
+
+    }
+
+    public function testClosure() {
+
+        $expectation = new ValueExpectation( $closure = function () {} );
+        $this->assertEquals( $expectation, $expectation->expect( $closure ) );
+
+    }
+
     /**
      * @dataProvider invalidProvider
      */
@@ -70,6 +84,24 @@ class ExpectTest extends TestCase {
             ' reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat' .
             ' cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum' ) ) )
             ->expect( $value );
+
+    }
+
+    public function testInvalidINF() {
+
+        $this->expectException( UnexpectedDataException::class );
+
+        $expectation = new ValueExpectation( INF );
+        $this->assertEquals( $expectation, $expectation->expect( 123 ) );
+
+    }
+
+    public function testInvalidClosure() {
+
+        $this->expectException( UnexpectedDataException::class );
+
+        $expectation = new ValueExpectation( function () {} );
+        $this->assertEquals( $expectation, $expectation->expect( function () {} ) );
 
     }
 

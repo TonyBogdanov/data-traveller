@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/ValueExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ValueExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +127,7 @@
       <workItem from="1574804041100" duration="607000" />
       <workItem from="1574852855316" duration="1187000" />
       <workItem from="1574855176303" duration="2392000" />
+      <workItem from="1574936480007" duration="992000" />
     </task>
     <servers />
   </component>
