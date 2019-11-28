@@ -57,6 +57,9 @@ class ExpectTest extends TestCase {
         $valueExpectation = new ArrayKeysExpectation( new ValueExpectation( [ 'foo', 'bar' ] ) );
         $this->assertEquals( $valueExpectation, $valueExpectation->expect( [ 'foo' => 'hello', 'bar' => 'world' ] ) );
 
+        $sortedExpectation = new ArrayKeysExpectation( new ValueExpectation( [ 'a', 'b', 'c' ] ), true );
+        $this->assertEquals( $sortedExpectation, $sortedExpectation->expect( [ 'b' => 'b', 'c' => 'c', 'a' => 'a' ] ) );
+
     }
 
     /**

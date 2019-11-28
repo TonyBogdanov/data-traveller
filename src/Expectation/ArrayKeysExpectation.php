@@ -26,13 +26,20 @@ class ArrayKeysExpectation extends ArrayExpectation {
     protected $expectation;
 
     /**
+     * @var bool
+     */
+    protected $sort;
+
+    /**
      * ArrayKeysExpectation constructor.
      *
      * @param ExpectationInterface $expectation
+     * @param bool $sort
      */
-    public function __construct( ExpectationInterface $expectation ) {
+    public function __construct( ExpectationInterface $expectation, bool $sort = false ) {
 
         $this->expectation = $expectation;
+        $this->sort = $sort;
 
     }
 
@@ -58,7 +65,14 @@ class ArrayKeysExpectation extends ArrayExpectation {
 
         try {
 
-            $this->expectation->expect( array_keys( $data ), $path );
+            $keys = array_keys( $data );
+            if ( $this->sort ) {
+
+                sort( $keys );
+
+            }
+
+            $this->expectation->expect( $keys, $path );
 
         } catch ( UnexpectedDataException $e ) {
 
