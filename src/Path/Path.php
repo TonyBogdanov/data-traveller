@@ -37,15 +37,16 @@ class Path {
 
     /**
      * @param string $value
+     * @param bool $disableRegex
      *
      * @return Path
      * @throws InvalidPathException
      */
-    public static function parse( string $value ): Path {
+    public static function parse( string $value, bool $disableRegex = false ): Path {
 
         try {
 
-            return new static( ( new Parser() )->parse( $value ) );
+            return new static( ( new Parser( $disableRegex ) )->parse( $value ) );
 
         } catch ( Exception $e ) {
 

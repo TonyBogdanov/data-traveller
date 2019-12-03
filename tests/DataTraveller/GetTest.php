@@ -120,6 +120,31 @@ class GetTest extends TestCase {
 
     }
 
+    /**
+     * @throws InvalidPathException
+     * @throws MissingDataException
+     * @throws UnexpectedDataException
+     */
+    public function testDisabledRegexSteps() {
+
+        $traveller = new DataTraveller();
+        $traveller->setDisableRegexSteps( true );
+
+        $this->assertSame(
+
+            'string',
+            $traveller->get(
+
+                'foo./^bar\.$/i.baz',
+                [ 'foo' => [ '/^bar.$/i' => [ 'baz' => 'string' ] ] ],
+                new StringExpectation()
+
+            )
+
+        );
+
+    }
+
     public function testMultiple() {
 
         $traveller = new DataTraveller();

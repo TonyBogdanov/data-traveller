@@ -24,6 +24,11 @@ use DataTraveller\Path\Path;
 class DataTraveller {
 
     /**
+     * @var bool
+     */
+    protected $disableRegexSteps = false;
+
+    /**
      * @param string $path
      * @param $data
      * @param ExpectationInterface $expectation
@@ -35,7 +40,7 @@ class DataTraveller {
      */
     public function get( string $path, $data, ExpectationInterface $expectation = null ) {
 
-        $path = Path::parse( $path );
+        $path = Path::parse( $path, $this->isDisableRegexSteps() );
         $value = $path->get( $data, new Path() );
 
         if ( isset( $expectation ) ) {
@@ -45,6 +50,27 @@ class DataTraveller {
         }
 
         return $value;
+
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDisableRegexSteps(): bool {
+
+        return $this->disableRegexSteps;
+
+    }
+
+    /**
+     * @param bool $disableRegexSteps
+     *
+     * @return $this
+     */
+    public function setDisableRegexSteps( bool $disableRegexSteps ) {
+
+        $this->disableRegexSteps = $disableRegexSteps;
+        return $this;
 
     }
 

@@ -51,16 +51,26 @@ class Parser {
 
     /**
      * Parser constructor.
+     *
+     * @param bool $disableRegex
      */
-    public function __construct() {
+    public function __construct( bool $disableRegex = false ) {
 
-        $this->tokenizer = new Tokenizer( [
+        $tokens = [
 
-            static::T_DOT       => '\.',
-            static::T_REGEX     => '\/[^\/\\\\]*(?:\\\\.[^\/\\\\]*)*\/[a-z]*',
-            static::T_LITERAL   => '[^\.\\\\]*(?:\\\\.[^\.\\\\]*)*',
+            static::T_DOT => '\.',
 
-        ] );
+        ];
+
+        if ( ! $disableRegex ) {
+
+            $tokens[ static::T_REGEX ] = '\/[^\/\\\\]*(?:\\\\.[^\/\\\\]*)*\/[a-z]*';
+
+        }
+
+        $tokens[ static::T_LITERAL ] = '[^\.\\\\]*(?:\\\\.[^\.\\\\]*)*';
+
+        $this->tokenizer = new Tokenizer( $tokens );
 
     }
 
