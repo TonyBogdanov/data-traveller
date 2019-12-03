@@ -38,9 +38,9 @@ class ExpectTest extends TestCase {
 
         $expectation = new AssociativeArrayExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 0 => 'one', 2 => 'two', 3 => 'three' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 'one' => 'one', 'two' => 'two', 'three' => 'three' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 0 => 'one', 2 => 'two', 3 => 'three' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 'one' => 'one', 'two' => 'two', 'three' => 'three' ] ) );
 
     }
 

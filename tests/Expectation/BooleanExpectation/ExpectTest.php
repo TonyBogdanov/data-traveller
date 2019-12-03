@@ -25,8 +25,8 @@ class ExpectTest extends TestCase {
 
         $expectation = new BooleanExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( true ) );
-        $this->assertEquals( $expectation, $expectation->expect( false ) );
+        $this->assertSame( $expectation, $expectation->expect( true ) );
+        $this->assertSame( $expectation, $expectation->expect( false ) );
 
     }
 

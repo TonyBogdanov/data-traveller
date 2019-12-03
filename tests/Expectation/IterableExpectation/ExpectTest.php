@@ -34,8 +34,8 @@ class ExpectTest extends TestCase {
 
         };
 
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
-        $this->assertEquals( $expectation, $expectation->expect( $iterable ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( $iterable ) );
 
     }
 

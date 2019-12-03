@@ -25,7 +25,7 @@ class ExpectTest extends TestCase {
 
         $expectation = new ArrayExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
 
     }
 

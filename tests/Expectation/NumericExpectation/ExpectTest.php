@@ -25,9 +25,9 @@ class ExpectTest extends TestCase {
 
         $expectation = new NumericExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( 1 ) );
-        $this->assertEquals( $expectation, $expectation->expect( 1.1 ) );
-        $this->assertEquals( $expectation, $expectation->expect( '1.23' ) );
+        $this->assertSame( $expectation, $expectation->expect( 1 ) );
+        $this->assertSame( $expectation, $expectation->expect( 1.1 ) );
+        $this->assertSame( $expectation, $expectation->expect( '1.23' ) );
 
     }
 

@@ -25,7 +25,7 @@ class ExpectTest extends TestCase {
 
         $expectation = new ClosureExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( function () {} ) );
+        $this->assertSame( $expectation, $expectation->expect( function () {} ) );
 
     }
 

@@ -38,10 +38,10 @@ class ExpectTest extends TestCase {
 
         $expectation = new EnumExpectation( [ true, 123, null, 'hello' ] );
 
-        $this->assertEquals( $expectation, $expectation->expect( true ) );
-        $this->assertEquals( $expectation, $expectation->expect( 123 ) );
-        $this->assertEquals( $expectation, $expectation->expect( null ) );
-        $this->assertEquals( $expectation, $expectation->expect( 'hello' ) );
+        $this->assertSame( $expectation, $expectation->expect( true ) );
+        $this->assertSame( $expectation, $expectation->expect( 123 ) );
+        $this->assertSame( $expectation, $expectation->expect( null ) );
+        $this->assertSame( $expectation, $expectation->expect( 'hello' ) );
 
     }
 

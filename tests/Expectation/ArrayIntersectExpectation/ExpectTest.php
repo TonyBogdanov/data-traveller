@@ -36,10 +36,10 @@ class ExpectTest extends TestCase {
     public function testValid() {
 
         $expectation = new ArrayIntersectExpectation( [ 'a', 'b' ], new ValueExpectation( [ 'a', 'b' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 'a', 'b', 'c' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 'a', 'b', 'c' ] ) );
 
         $expectation = new ArrayIntersectExpectation( [ 'a', 'b', 'c' ], new ValueExpectation( [ 'a', 'b' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 'a', 'b' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 'a', 'b' ] ) );
 
     }
 
@@ -51,7 +51,7 @@ class ExpectTest extends TestCase {
         $this->expectException( UnexpectedDataException::class );
 
         $expectation = new ArrayIntersectExpectation( [ 'a', 'b' ], new ValueExpectation( [ 'a', 'b' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( $value ) );
+        $this->assertSame( $expectation, $expectation->expect( $value ) );
 
     }
 

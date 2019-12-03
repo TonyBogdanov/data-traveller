@@ -26,7 +26,7 @@ class ExpectTest extends TestCase {
         $expectation = new ResourceExpectation();
         $resource = imagecreate( 1, 1 );
 
-        $this->assertEquals( $expectation, $expectation->expect( $resource ) );
+        $this->assertSame( $expectation, $expectation->expect( $resource ) );
 
         imagedestroy( $resource );
 

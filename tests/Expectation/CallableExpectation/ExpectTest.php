@@ -25,8 +25,8 @@ class ExpectTest extends TestCase {
 
         $expectation = new CallableExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( function () {} ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ $this, 'testValid' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( function () {} ) );
+        $this->assertSame( $expectation, $expectation->expect( [ $this, 'testValid' ] ) );
 
     }
 

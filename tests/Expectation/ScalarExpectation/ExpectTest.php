@@ -25,10 +25,10 @@ class ExpectTest extends TestCase {
 
         $expectation = new ScalarExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( 1 ) );
-        $this->assertEquals( $expectation, $expectation->expect( 1.1 ) );
-        $this->assertEquals( $expectation, $expectation->expect( 'string' ) );
-        $this->assertEquals( $expectation, $expectation->expect( true ) );
+        $this->assertSame( $expectation, $expectation->expect( 1 ) );
+        $this->assertSame( $expectation, $expectation->expect( 1.1 ) );
+        $this->assertSame( $expectation, $expectation->expect( 'string' ) );
+        $this->assertSame( $expectation, $expectation->expect( true ) );
 
     }
 

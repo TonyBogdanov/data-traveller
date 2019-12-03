@@ -26,13 +26,13 @@ class ExpectTest extends TestCase {
 
         $expectation = new NotExpectation( new IntegerExpectation() );
 
-        $this->assertEquals( $expectation, $expectation->expect( 1.1 ) );
-        $this->assertEquals( $expectation, $expectation->expect( 'string' ) );
-        $this->assertEquals( $expectation, $expectation->expect( true ) );
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
-        $this->assertEquals( $expectation, $expectation->expect( imagecreate( 1, 1 ) ) );
-        $this->assertEquals( $expectation, $expectation->expect( new \stdClass() ) );
-        $this->assertEquals( $expectation, $expectation->expect( function () {} ) );
+        $this->assertSame( $expectation, $expectation->expect( 1.1 ) );
+        $this->assertSame( $expectation, $expectation->expect( 'string' ) );
+        $this->assertSame( $expectation, $expectation->expect( true ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( imagecreate( 1, 1 ) ) );
+        $this->assertSame( $expectation, $expectation->expect( new \stdClass() ) );
+        $this->assertSame( $expectation, $expectation->expect( function () {} ) );
 
     }
 

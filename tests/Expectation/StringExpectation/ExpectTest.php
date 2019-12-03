@@ -25,7 +25,7 @@ class ExpectTest extends TestCase {
 
         $expectation = new StringExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( 'string' ) );
+        $this->assertSame( $expectation, $expectation->expect( 'string' ) );
 
     }
 

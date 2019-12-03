@@ -7,33 +7,33 @@
  *  file that was distributed with this source code.
  */
 
-namespace Tests\DataTraveller\Expectation\FloatExpectation;
+namespace Tests\DataTraveller\Expectation\RegexPatternExpectation;
 
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
-use DataTraveller\Expectation\FloatExpectation;
+use DataTraveller\Expectation\RegexPatternExpectation;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ExpectTest
  *
- * @package Tests\DataTraveller\Expectation\FloatExpectation
+ * @package Tests\DataTraveller\Expectation\RegexPatternExpectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
 class ExpectTest extends TestCase {
 
     public function testValid() {
 
-        $expectation = new FloatExpectation();
+        $expectation = new RegexPatternExpectation();
 
-        $this->assertSame( $expectation, $expectation->expect( 1.1 ) );
+        $this->assertSame( $expectation, $expectation->expect( '/^\d+$/' ) );
 
     }
 
-    public function testInvalid() {
+    public function testInvalidDelimiter() {
 
         $this->expectException( UnexpectedDataException::class );
 
-        ( new FloatExpectation() )->expect( 1 );
+        ( new RegexPatternExpectation() )->expect( '/^\d+$' );
 
     }
 

@@ -25,7 +25,7 @@ class ExpectTest extends TestCase {
 
         $expectation = new ClassExpectation( static::class );
 
-        $this->assertEquals( $expectation, $expectation->expect( $this ) );
+        $this->assertSame( $expectation, $expectation->expect( $this ) );
 
     }
 

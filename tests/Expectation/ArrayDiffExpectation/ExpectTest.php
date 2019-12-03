@@ -36,7 +36,7 @@ class ExpectTest extends TestCase {
     public function testValid() {
 
         $expectation = new ArrayDiffExpectation( [ 'a', 'b' ], new ValueExpectation( [ 'c' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 'a', 'b', 'c' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 'a', 'b', 'c' ] ) );
 
     }
 
@@ -48,7 +48,7 @@ class ExpectTest extends TestCase {
         $this->expectException( UnexpectedDataException::class );
 
         $expectation = new ArrayDiffExpectation( [ 'a', 'b' ], new ValueExpectation( [ 'c', 'd' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( $value ) );
+        $this->assertSame( $expectation, $expectation->expect( $value ) );
 
     }
 

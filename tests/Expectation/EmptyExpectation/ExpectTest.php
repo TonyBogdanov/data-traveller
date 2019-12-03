@@ -25,13 +25,13 @@ class ExpectTest extends TestCase {
 
         $expectation = new EmptyExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( '' ) );
-        $this->assertEquals( $expectation, $expectation->expect( 0 ) );
-        $this->assertEquals( $expectation, $expectation->expect( 0.0 ) );
-        $this->assertEquals( $expectation, $expectation->expect( '0' ) );
-        $this->assertEquals( $expectation, $expectation->expect( null ) );
-        $this->assertEquals( $expectation, $expectation->expect( false ) );
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( '' ) );
+        $this->assertSame( $expectation, $expectation->expect( 0 ) );
+        $this->assertSame( $expectation, $expectation->expect( 0.0 ) );
+        $this->assertSame( $expectation, $expectation->expect( '0' ) );
+        $this->assertSame( $expectation, $expectation->expect( null ) );
+        $this->assertSame( $expectation, $expectation->expect( false ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
 
     }
 

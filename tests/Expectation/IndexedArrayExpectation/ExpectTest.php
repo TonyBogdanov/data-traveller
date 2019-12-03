@@ -37,10 +37,10 @@ class ExpectTest extends TestCase {
 
         $expectation = new IndexedArrayExpectation();
 
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 'one', 'two', 'three' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 0 => 'one', 1 => 'two', 2 => 'three' ] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 0 => 'one', 2 => 'two', 1 => 'three' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 'one', 'two', 'three' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 0 => 'one', 1 => 'two', 2 => 'three' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 0 => 'one', 2 => 'two', 1 => 'three' ] ) );
 
     }
 

@@ -2,10 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ArrayKeysExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ArrayKeysExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/RegexPatternExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/RegexPatternExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ArrayDiffExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ArrayDiffExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ArrayExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ArrayExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ArrayIntersectExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ArrayIntersectExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/AssociativeArrayExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/AssociativeArrayExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/BooleanExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/BooleanExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/CallableExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/CallableExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ClassExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ClassExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ClosureExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ClosureExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/CountableExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/CountableExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/EmptyExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/EmptyExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/EnumExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/EnumExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/FloatExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/FloatExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/IndexedArrayExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/IndexedArrayExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/IntegerExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/IntegerExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/IterableExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/IterableExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ListExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ListExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/MapExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/MapExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/NotExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/NotExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/NullExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/NullExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/NumericExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/NumericExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ObjectExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ObjectExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/OrExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/OrExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/RegexMatchExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/RegexMatchExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/RegexPatternExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/RegexPatternExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ResourceExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ResourceExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ScalarExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ScalarExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/StringExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/StringExpectation/ExpectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +90,11 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -77,10 +110,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
-      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\data-traveller\tests\Expectation" />
       <recent name="C:\Dev\data-traveller\src\Expectation" />
@@ -88,24 +117,28 @@
       <recent name="C:\Dev\data-traveller\tests\DataTraveller" />
       <recent name="C:\Dev\data-traveller\tests\Expectation\NullExpectation" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
+      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -128,6 +161,7 @@
       <workItem from="1574939820616" duration="77000" />
       <workItem from="1574940591737" duration="1403000" />
       <workItem from="1574942647835" duration="171000" />
+      <workItem from="1575374221724" duration="675000" />
     </task>
     <servers />
   </component>
@@ -149,6 +183,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="641" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575374245802">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="641" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575374245802" />
+    <state x="581" y="206" width="758" height="628" key="find.popup" timestamp="1575374875322">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="581" y="206" width="758" height="628" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575374875322" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

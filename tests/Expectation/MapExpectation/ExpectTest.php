@@ -127,7 +127,7 @@ class ExpectTest extends TestCase {
 
         ] );
 
-        $this->assertEquals( $expectation, $expectation->expect( [
+        $this->assertSame( $expectation, $expectation->expect( [
 
             'string' => 'string',
             'integer' => 123,

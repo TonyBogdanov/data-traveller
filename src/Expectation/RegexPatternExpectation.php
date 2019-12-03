@@ -13,35 +13,19 @@ use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
 use DataTraveller\Path\Path;
 
 /**
- * Class RegexExpectation
+ * Class RegexPatternExpectation
  *
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class RegexExpectation implements ExpectationInterface {
-
-    /**
-     * @var string
-     */
-    protected $pattern;
-
-    /**
-     * RegexExpectation constructor.
-     *
-     * @param string $pattern
-     */
-    public function __construct( string $pattern ) {
-
-        $this->pattern = $pattern;
-
-    }
+class RegexPatternExpectation extends StringExpectation {
 
     /**
      * @return string
      */
     public function getType(): string {
 
-        return $this->pattern;
+        return 'regexPattern';
 
     }
 
@@ -54,7 +38,11 @@ class RegexExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( ! preg_match( $this->pattern, $data ) ) {
+        parent::expect( $data, $path );
+
+        @preg_match( $data, '' );
+
+        if ( PREG_NO_ERROR !== preg_last_error() ) {
 
             throw new UnexpectedDataException( $data, $this->getType(), $path );
 

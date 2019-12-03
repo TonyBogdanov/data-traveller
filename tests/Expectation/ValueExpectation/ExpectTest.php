@@ -60,14 +60,14 @@ class ExpectTest extends TestCase {
     public function testINF() {
 
         $expectation = new ValueExpectation( INF );
-        $this->assertEquals( $expectation, $expectation->expect( INF ) );
+        $this->assertSame( $expectation, $expectation->expect( INF ) );
 
     }
 
     public function testClosure() {
 
         $expectation = new ValueExpectation( $closure = function () {} );
-        $this->assertEquals( $expectation, $expectation->expect( $closure ) );
+        $this->assertSame( $expectation, $expectation->expect( $closure ) );
 
     }
 
@@ -92,7 +92,7 @@ class ExpectTest extends TestCase {
         $this->expectException( UnexpectedDataException::class );
 
         $expectation = new ValueExpectation( INF );
-        $this->assertEquals( $expectation, $expectation->expect( 123 ) );
+        $this->assertSame( $expectation, $expectation->expect( 123 ) );
 
     }
 
@@ -101,7 +101,7 @@ class ExpectTest extends TestCase {
         $this->expectException( UnexpectedDataException::class );
 
         $expectation = new ValueExpectation( function () {} );
-        $this->assertEquals( $expectation, $expectation->expect( function () {} ) );
+        $this->assertSame( $expectation, $expectation->expect( function () {} ) );
 
     }
 

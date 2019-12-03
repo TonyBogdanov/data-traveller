@@ -41,8 +41,8 @@ class ExpectTest extends TestCase {
 
         $expectation = new ListExpectation( new StringExpectation() );
 
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ 'string', 'another string' ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ 'string', 'another string' ] ) );
 
     }
 
@@ -50,8 +50,8 @@ class ExpectTest extends TestCase {
 
         $expectation = new ListExpectation( new ListExpectation( new StringExpectation() ) );
 
-        $this->assertEquals( $expectation, $expectation->expect( [] ) );
-        $this->assertEquals( $expectation, $expectation->expect( [ [ 'string', ], [ 'another string' ] ] ) );
+        $this->assertSame( $expectation, $expectation->expect( [] ) );
+        $this->assertSame( $expectation, $expectation->expect( [ [ 'string', ], [ 'another string' ] ] ) );
 
     }
 
