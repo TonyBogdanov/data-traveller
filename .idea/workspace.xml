@@ -3,36 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayDiffExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayDiffExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayIntersectExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayIntersectExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/AssociativeArrayExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/AssociativeArrayExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/IndexedArrayExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/IndexedArrayExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Expectation/MapExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/MapExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/RegexPatternExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/RegexPatternExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Expectation/ArrayDiffExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ArrayDiffExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ArrayExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ArrayExpectation/ExpectTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Expectation/ArrayIntersectExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ArrayIntersectExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/AssociativeArrayExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/AssociativeArrayExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/BooleanExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/BooleanExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/CallableExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/CallableExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ClassExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ClassExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ClosureExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ClosureExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/CountableExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/CountableExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/EmptyExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/EmptyExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/EnumExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/EnumExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/FloatExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/FloatExpectation/ExpectTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Expectation/IndexedArrayExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/IndexedArrayExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/IntegerExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/IntegerExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/IterableExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/IterableExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ListExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ListExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/MapExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/MapExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/NotExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/NotExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/NullExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/NullExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/NumericExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/NumericExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ObjectExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ObjectExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/OrExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/OrExpectation/ExpectTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Expectation/RegexMatchExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/RegexMatchExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/RegexPatternExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/RegexPatternExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ResourceExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ResourceExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ScalarExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ScalarExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/StringExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/StringExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/ValueExpectation/ExpectTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +144,7 @@
       <workItem from="1574940591737" duration="1403000" />
       <workItem from="1574942647835" duration="171000" />
       <workItem from="1575374221724" duration="675000" />
+      <workItem from="1575378131503" duration="246000" />
     </task>
     <servers />
   </component>
@@ -189,10 +172,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="641" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575374245802" />
-    <state x="581" y="206" width="758" height="628" key="find.popup" timestamp="1575374875322">
+    <state x="581" y="206" width="758" height="628" key="find.popup" timestamp="1575378384600">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="581" y="206" width="758" height="628" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575374875322" />
+    <state x="581" y="206" width="758" height="628" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575378384600" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

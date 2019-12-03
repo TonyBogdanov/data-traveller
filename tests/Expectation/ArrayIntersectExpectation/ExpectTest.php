@@ -27,7 +27,7 @@ class ExpectTest extends TestCase {
         return [
 
             [ [ 'b', 'c', 'd' ] ],
-            [ 'string' ],
+            [ [ 'string' ] ],
 
         ];
 

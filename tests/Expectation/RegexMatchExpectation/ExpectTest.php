@@ -21,20 +21,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ExpectTest extends TestCase {
 
-    public function provider(): array {
-
-        return [
-
-            [ 'hello' ],
-            [ 123.45 ],
-            [ null ],
-            [ [] ],
-            [ new \stdClass() ],
-
-        ];
-
-    }
-
     public function testValidIP() {
 
         $expectation = new RegexMatchExpectation(
@@ -55,14 +41,11 @@ class ExpectTest extends TestCase {
 
     }
 
-    /**
-     * @dataProvider provider
-     */
-    public function testInvalid( $data ) {
+    public function testInvalid() {
 
         $this->expectException( UnexpectedDataException::class );
 
-        ( new RegexMatchExpectation( '/^\d+$/' ) )->expect( $data );
+        ( new RegexMatchExpectation( '/^\d+$/' ) )->expect( 'hello' );
 
     }
 

@@ -19,7 +19,7 @@ use DataTraveller\Path\Step\LiteralStep;
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class ListExpectation extends IndexedArrayExpectation {
+class ListExpectation implements ExpectationInterface {
 
     /**
      * @var ExpectationInterface
@@ -54,8 +54,6 @@ class ListExpectation extends IndexedArrayExpectation {
      * @throws UnexpectedDataException
      */
     public function expect( $data, Path $path = null ) {
-
-        parent::expect( $data, $path );
 
         foreach ( $data as $key => $item ) {
 

@@ -25,7 +25,7 @@ class ExpectTest extends TestCase {
 
         return [
 
-            [ new \stdClass() ],
+            [ [ 'm' => new \stdClass() ] ],
             [ [ 0 => 'one', 2 => 'two', 3 => 'three' ] ],
             [ [ 'one' => 'one', 'two' => 'two', 'three' => 'three' ] ],
 

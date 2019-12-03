@@ -18,7 +18,7 @@ use DataTraveller\Path\Path;
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class AssociativeArrayExpectation extends ArrayExpectation {
+class AssociativeArrayExpectation implements ExpectationInterface {
 
     /**
      * @return string
@@ -37,8 +37,6 @@ class AssociativeArrayExpectation extends ArrayExpectation {
      * @throws UnexpectedDataException
      */
     public function expect( $data, Path $path = null ) {
-
-        parent::expect( $data, $path );
 
         $count = count( $data );
         if ( 0 === $count ) {

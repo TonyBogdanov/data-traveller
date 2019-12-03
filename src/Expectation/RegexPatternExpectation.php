@@ -18,7 +18,7 @@ use DataTraveller\Path\Path;
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class RegexPatternExpectation extends StringExpectation {
+class RegexPatternExpectation implements ExpectationInterface {
 
     /**
      * @return string
@@ -37,8 +37,6 @@ class RegexPatternExpectation extends StringExpectation {
      * @throws UnexpectedDataException
      */
     public function expect( $data, Path $path = null ) {
-
-        parent::expect( $data, $path );
 
         @preg_match( $data, '' );
 

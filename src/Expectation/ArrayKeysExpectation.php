@@ -18,7 +18,7 @@ use DataTraveller\Path\Path;
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class ArrayKeysExpectation extends ArrayExpectation {
+class ArrayKeysExpectation implements ExpectationInterface {
 
     /**
      * @var ExpectationInterface
@@ -60,8 +60,6 @@ class ArrayKeysExpectation extends ArrayExpectation {
      * @throws UnexpectedDataException
      */
     public function expect( $data, Path $path = null ) {
-
-        parent::expect( $data, $path );
 
         try {
 

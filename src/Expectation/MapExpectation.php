@@ -19,7 +19,7 @@ use DataTraveller\Path\Step\LiteralStep;
  * @package DataTraveller\Expectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
-class MapExpectation extends AssociativeArrayExpectation {
+class MapExpectation implements ExpectationInterface {
 
     /**
      * @var ExpectationInterface[]
@@ -61,8 +61,6 @@ class MapExpectation extends AssociativeArrayExpectation {
      * @throws UnexpectedDataException
      */
     public function expect( $data, Path $path = null ) {
-
-        parent::expect( $data, $path );
 
         if ( count( $data ) !== count( $this->expectations ) ) {
 
