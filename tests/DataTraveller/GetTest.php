@@ -110,9 +110,34 @@ class GetTest extends TestCase {
             $data,
             $traveller->get(
 
-                'foo.bar',
-                [ 'foo' => [ 'bar' => $data ] ],
+                'foo.b\.ar',
+                [ 'foo' => [ 'b.ar' => $data ] ],
                 new $expectation( ...$arguments )
+
+            )
+
+        );
+
+    }
+
+    /**
+     * @throws InvalidPathException
+     * @throws MissingDataException
+     * @throws UnexpectedDataException
+     */
+    public function testDisabledRegexSteps() {
+
+        $traveller = new DataTraveller();
+        $traveller->setDisableRegexSteps( true );
+
+        $this->assertSame(
+
+            'string',
+            $traveller->get(
+
+                'foo./^bar\.$/i.baz',
+                [ 'foo' => [ '/^bar.$/i' => [ 'baz' => 'string' ] ] ],
+                new StringExpectation()
 
             )
 

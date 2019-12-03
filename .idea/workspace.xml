@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Expectation/ClassExistsExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/ClassExistsExpectation/ExpectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Expectation/FunctionExistsExpectation/ExpectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Expectation/FunctionExistsExpectation/ExpectTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,16 +78,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
+      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\data-traveller\tests\Expectation" />
       <recent name="C:\Dev\data-traveller\src\Expectation" />
       <recent name="C:\Dev\data-traveller\tests\Path\Path" />
       <recent name="C:\Dev\data-traveller\tests\DataTraveller" />
       <recent name="C:\Dev\data-traveller\tests\Expectation\NullExpectation" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
-      <recent name="C:\Dev\data-traveller\tests\Path\Step" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,7 +130,7 @@
       <workItem from="1574940591737" duration="1403000" />
       <workItem from="1574942647835" duration="171000" />
       <workItem from="1575374221724" duration="675000" />
-      <workItem from="1575378131503" duration="511000" />
+      <workItem from="1575378131503" duration="4629000" />
     </task>
     <servers />
   </component>
@@ -158,6 +154,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="744" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1575379595190">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="744" y="235" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575379595190" />
     <state x="641" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575374245802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
