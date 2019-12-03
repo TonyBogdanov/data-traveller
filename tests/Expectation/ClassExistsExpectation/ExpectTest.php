@@ -7,25 +7,25 @@
  *  file that was distributed with this source code.
  */
 
-namespace Tests\DataTraveller\Expectation\FunctionExistsExpectation;
+namespace Tests\DataTraveller\Expectation\ClassExistsExpectation;
 
+use DataTraveller\Expectation\ClassExistsExpectation;
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
-use DataTraveller\Expectation\FunctionExistsExpectation;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ExpectTest
  *
- * @package Tests\DataTraveller\Expectation\FunctionExistsExpectation
+ * @package Tests\DataTraveller\Expectation\ClassExistsExpectation
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
 class ExpectTest extends TestCase {
 
     public function testValid() {
 
-        $expectation = new FunctionExistsExpectation();
+        $expectation = new ClassExistsExpectation();
 
-        $this->assertSame( $expectation, $expectation->expect( 'substr' ) );
+        $this->assertSame( $expectation, $expectation->expect( static::class ) );
 
     }
 
@@ -33,7 +33,7 @@ class ExpectTest extends TestCase {
 
         $this->expectException( UnexpectedDataException::class );
 
-        ( new FunctionExistsExpectation() )->expect( 'substr_' );
+        ( new ClassExistsExpectation() )->expect( static::class . '_' );
 
     }
 
