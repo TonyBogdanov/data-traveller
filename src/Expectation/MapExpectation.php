@@ -62,28 +62,16 @@ class MapExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( count( $data ) !== count( $this->expectations ) ) {
-
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
-
-        }
-
         $keys = array_keys( $data );
         sort( $keys );
 
-        if ( array_keys( $this->expectations ) !== $keys ) {
-
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
-
-        }
-
-        foreach ( $data as $key => $item ) {
+        foreach ( $this->expectations as $key => $expectation ) {
 
             try {
 
-                $this->expectations[ $key ]->expect(
+                $expectation->expect(
 
-                    $item,
+                    $data[ $key ],
                     $path ? ( clone $path )->push( new LiteralStep( $key ) ) : null
 
                 );

@@ -9,6 +9,7 @@
 
 namespace Tests\DataTraveller\Expectation\MapExpectation;
 
+use DataTraveller\Expectation\AndExpectation;
 use DataTraveller\Expectation\ArrayExpectation;
 use DataTraveller\Expectation\BooleanExpectation;
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
@@ -30,31 +31,6 @@ class ExpectTest extends TestCase {
 
         return [
 
-            [ [] ],
-            [ [
-
-                'string' => 'string',
-                'integer' => 123,
-                'array' => [ 'test', 'foo' => 'bar' ],
-                'list' => [ true, false ],
-
-            ] ],
-            [ [
-
-                'string' => 'string',
-                'integer' => 123,
-                'array' => [ 'test', 'foo' => 'bar' ],
-                'list' => [ true, false ],
-                'map_' => [
-
-                    'string' => 'string',
-                    'integer' => 123,
-                    'array' => [ 'test', 'foo' => 'bar' ],
-                    'list' => [ true, false ],
-
-                ],
-
-            ] ],
             [ [
 
                 'string' => 123,
@@ -74,6 +50,57 @@ class ExpectTest extends TestCase {
             [ [
 
                 'string' => 'string',
+                'integer' => 'string',
+                'array' => [ 'test', 'foo' => 'bar' ],
+                'list' => [ true, false ],
+                'map' => [
+
+                    'string' => 'string',
+                    'integer' => 123,
+                    'array' => [ 'test', 'foo' => 'bar' ],
+                    'list' => [ true, false ],
+
+                ],
+
+            ] ],
+
+            [ [
+
+                'string' => 'string',
+                'integer' => 123,
+                'array' => 'string',
+                'list' => [ true, false ],
+                'map' => [
+
+                    'string' => 'string',
+                    'integer' => 123,
+                    'array' => [ 'test', 'foo' => 'bar' ],
+                    'list' => [ true, false ],
+
+                ],
+
+            ] ],
+
+            [ [
+
+                'string' => 'string',
+                'integer' => 123,
+                'array' => [ 'test', 'foo' => 'bar' ],
+                'list' => 'string',
+                'map' => [
+
+                    'string' => 'string',
+                    'integer' => 123,
+                    'array' => [ 'test', 'foo' => 'bar' ],
+                    'list' => [ true, false ],
+
+                ],
+
+            ] ],
+
+            [ [
+
+                'string' => 'string',
                 'integer' => 123,
                 'array' => [ 'test', 'foo' => 'bar' ],
                 'list' => [ true, false ],
@@ -87,6 +114,41 @@ class ExpectTest extends TestCase {
                 ],
 
             ] ],
+
+            [ [
+
+                'string' => 'string',
+                'integer' => 123,
+                'array' => [ 'test', 'foo' => 'bar' ],
+                'list' => [ true, false ],
+                'map' => [
+
+                    'string' => 'string',
+                    'integer' => 'string',
+                    'array' => [ 'test', 'foo' => 'bar' ],
+                    'list' => [ true, false ],
+
+                ],
+
+            ] ],
+
+            [ [
+
+                'string' => 'string',
+                'integer' => 123,
+                'array' => [ 'test', 'foo' => 'bar' ],
+                'list' => [ true, false ],
+                'map' => [
+
+                    'string' => 'string',
+                    'integer' => 123,
+                    'array' => 'string',
+                    'list' => [ true, false ],
+
+                ],
+
+            ] ],
+
             [ [
 
                 'string' => 'string',
@@ -98,7 +160,7 @@ class ExpectTest extends TestCase {
                     'string' => 'string',
                     'integer' => 123,
                     'array' => [ 'test', 'foo' => 'bar' ],
-                    'list' => [ true, 'false' ],
+                    'list' => 'string',
 
                 ],
 
@@ -146,6 +208,42 @@ class ExpectTest extends TestCase {
 
     }
 
+    public function testValidExtraKeys() {
+
+        $expectation = new MapExpectation( [
+
+            'integer' => new IntegerExpectation(),
+            'array' => new ArrayExpectation(),
+            'list' => new ListExpectation( new BooleanExpectation() ),
+            'map' => new MapExpectation( [
+
+                'integer' => new IntegerExpectation(),
+                'array' => new ArrayExpectation(),
+                'list' => new ListExpectation( new BooleanExpectation() ),
+
+            ] ),
+
+        ] );
+
+        $this->assertSame( $expectation, $expectation->expect( [
+
+            'string' => 'string',
+            'integer' => 123,
+            'array' => [ 'test', 'foo' => 'bar' ],
+            'list' => [ true, false ],
+            'map' => [
+
+                'string' => 'string',
+                'integer' => 123,
+                'array' => [ 'test', 'foo' => 'bar' ],
+                'list' => [ true, false ],
+
+            ],
+
+        ] ) );
+
+    }
+
     /**
      * @dataProvider invalidProvider
      */
@@ -158,13 +256,23 @@ class ExpectTest extends TestCase {
             'string' => new StringExpectation(),
             'integer' => new IntegerExpectation(),
             'array' => new ArrayExpectation(),
-            'list' => new ListExpectation( new BooleanExpectation() ),
+            'list' => new AndExpectation(
+
+                new ArrayExpectation(),
+                new ListExpectation( new BooleanExpectation() )
+
+            ),
             'map' => new MapExpectation( [
 
                 'string' => new StringExpectation(),
                 'integer' => new IntegerExpectation(),
                 'array' => new ArrayExpectation(),
-                'list' => new ListExpectation( new BooleanExpectation() ),
+                'list' => new AndExpectation(
+
+                    new ArrayExpectation(),
+                    new ListExpectation( new BooleanExpectation() )
+
+                ),
 
             ] ),
 
