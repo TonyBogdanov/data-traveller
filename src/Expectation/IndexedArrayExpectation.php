@@ -3,8 +3,8 @@
 /**
  * Copyright (c) Tony Bogdanov <tonybogdanov@gmail.com>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace DataTraveller\Expectation;
@@ -25,7 +25,7 @@ class IndexedArrayExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'array<indexed>';
+        return 'indexedArray';
 
     }
 

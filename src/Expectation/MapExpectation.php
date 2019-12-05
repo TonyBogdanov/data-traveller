@@ -3,13 +3,14 @@
 /**
  * Copyright (c) Tony Bogdanov <tonybogdanov@gmail.com>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace DataTraveller\Expectation;
 
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
+use DataTraveller\Expectation\Traits\IndentTrait;
 use DataTraveller\Path\Path;
 use DataTraveller\Path\Step\LiteralStep;
 
@@ -20,6 +21,8 @@ use DataTraveller\Path\Step\LiteralStep;
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
 class MapExpectation implements ExpectationInterface {
+
+    use IndentTrait;
 
     /**
      * @var ExpectationInterface[]
@@ -43,13 +46,15 @@ class MapExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'map<' .
-            implode( ',', array_map( function ( string $key, ExpectationInterface $expectation ) {
+        $result = "map {\n";
 
-                return $key . '=' . $expectation->getType();
+        foreach ( $this->expectations as $key => $expectation ) {
 
-            }, array_keys( $this->expectations ), array_values( $this->expectations ) ) ) .
-            '>';
+            $result .= $this->indent( $key . ' = ' . $expectation->getType() . ";\n" );
+
+        }
+
+        return $result . '}';
 
     }
 

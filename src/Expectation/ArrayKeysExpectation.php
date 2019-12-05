@@ -3,8 +3,8 @@
 /**
  * Copyright (c) Tony Bogdanov <tonybogdanov@gmail.com>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace DataTraveller\Expectation;
@@ -48,7 +48,7 @@ class ArrayKeysExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'arrayKeys<' . $this->expectation->getType() . '>';
+        return 'arrayKeys ( ' . $this->expectation->getType() . ' )';
 
     }
 

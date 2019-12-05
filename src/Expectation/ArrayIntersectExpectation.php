@@ -3,13 +3,14 @@
 /**
  * Copyright (c) Tony Bogdanov <tonybogdanov@gmail.com>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace DataTraveller\Expectation;
 
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
+use DataTraveller\Expectation\Traits\IndentTrait;
 use DataTraveller\Path\Path;
 
 /**
@@ -19,6 +20,8 @@ use DataTraveller\Path\Path;
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
 class ArrayIntersectExpectation implements ExpectationInterface {
+
+    use IndentTrait;
 
     /**
      * @var array
@@ -48,7 +51,11 @@ class ArrayIntersectExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'arrayIntersect<' . json_encode( $this->compare ) . ',' . $this->expectation->getType() . '>';
+        return
+            "arrayIntersect (\n" .
+            $this->indent( json_encode( $this->compare ) ) . ";\n" .
+            $this->indent( $this->expectation->getType() ) . ";\n" .
+            ')';
 
     }
 

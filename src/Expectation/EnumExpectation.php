@@ -3,13 +3,14 @@
 /**
  * Copyright (c) Tony Bogdanov <tonybogdanov@gmail.com>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace DataTraveller\Expectation;
 
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
+use DataTraveller\Expectation\Traits\IndentTrait;
 use DataTraveller\Path\Path;
 
 /**
@@ -19,6 +20,8 @@ use DataTraveller\Path\Path;
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
 class EnumExpectation implements ExpectationInterface {
+
+    use IndentTrait;
 
     /**
      * @var array
@@ -41,13 +44,15 @@ class EnumExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'enum<' .
-            implode( ',', array_map( function ( $value ) {
+        $result = "enum (\n";
 
-                return json_encode( $value );
+        foreach ( $this->options as $option ) {
 
-            }, $this->options ) ) .
-            '>';
+            $result .= $this->indent( json_encode( $option ) . ";\n" );
+
+        }
+
+        return $result . ')';
 
     }
 

@@ -3,13 +3,14 @@
 /**
  * Copyright (c) Tony Bogdanov <tonybogdanov@gmail.com>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace DataTraveller\Expectation;
 
 use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
+use DataTraveller\Expectation\Traits\IndentTrait;
 use DataTraveller\Path\Path;
 
 /**
@@ -19,6 +20,8 @@ use DataTraveller\Path\Path;
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
 class OrExpectation implements ExpectationInterface {
+
+    use IndentTrait;
 
     /**
      * @var ExpectationInterface[]
@@ -49,13 +52,15 @@ class OrExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'or<' .
-            implode( ',', array_map( function ( ExpectationInterface $expectation ) {
+        $result = "or (\n";
 
-                return $expectation->getType();
+        foreach ( $this->expectations as $expectation ) {
 
-            }, $this->expectations ) ) .
-            '>';
+            $result .= $this->indent( $expectation->getType() . ";\n" );
+
+        }
+
+        return $result . ')';
 
     }
 

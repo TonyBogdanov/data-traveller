@@ -3,8 +3,8 @@
 /**
  * Copyright (c) Tony Bogdanov <tonybogdanov@gmail.com>
  *
- *  For the full copyright and license information, please view the LICENSE
- *  file that was distributed with this source code.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace DataTraveller\Expectation\Exceptions;
@@ -55,10 +55,10 @@ class UnexpectedDataException extends \Exception {
 
         parent::__construct( sprintf(
 
-            'Unexpected data: %1$s, expected: %2$s%3$s.',
+            "Unexpected data: %1\$s, expected:\n%2\$s%3\$s.",
             $this->format( $data ),
             $expected,
-            $path ? sprintf( ' at: %1$s', $path ) : '',
+            $path ? sprintf( "\nat: %1\$s", $path ) : '',
 
         ), 0, $previous );
 
