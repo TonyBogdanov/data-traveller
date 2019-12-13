@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Expectation/GreaterThanExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Expectation/GreaterThanOrEqualExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Expectation/LowerThanExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Expectation/LowerThanOrEqualExpectation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/GreaterThanExpectation/ExpectTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/GreaterThanOrEqualExpectation/ExpectTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/LowerThanExpectation/ExpectTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Expectation/LowerThanOrEqualExpectation/ExpectTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Expectation/CountExpectation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Expectation/StringLengthExpectation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Expectation/CountExpectation/ExpectTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Expectation/StringLengthExpectation/ExpectTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +77,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Expectation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Expectation" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -89,16 +85,16 @@
     <property name="settings.editor.selected.configurable" value="copyright.profiles" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Dev\data-traveller\tests\Expectation" />
-      <recent name="C:\Dev\data-traveller\src\Expectation" />
-      <recent name="C:\Dev\data-traveller\tests\Path\Path" />
-      <recent name="C:\Dev\data-traveller\tests\DataTraveller" />
-      <recent name="C:\Dev\data-traveller\tests\Expectation\NullExpectation" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Dev\data-traveller\tests\Path\Step\LiteralStep" />
       <recent name="C:\Dev\data-traveller\tests\Path\Step" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Dev\data-traveller\src\Expectation" />
+      <recent name="C:\Dev\data-traveller\tests\Expectation" />
+      <recent name="C:\Dev\data-traveller\tests\Path\Path" />
+      <recent name="C:\Dev\data-traveller\tests\DataTraveller" />
+      <recent name="C:\Dev\data-traveller\tests\Expectation\NullExpectation" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,6 +141,7 @@
       <workItem from="1575457236493" duration="724000" />
       <workItem from="1575581605403" duration="2071000" />
       <workItem from="1576220630464" duration="696000" />
+      <workItem from="1576221368490" duration="610000" />
     </task>
     <servers />
   </component>
