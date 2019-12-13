@@ -23,7 +23,7 @@ use Nette\Tokenizer\Exception;
  * @package DataTraveller\Path
  * @author TonyBogdanov <tonybogdanov@gmail.com>
  */
-class Path {
+class Path implements \Countable {
 
     /**
      * @var StepInterface[]
@@ -90,6 +90,15 @@ class Path {
         }, $this->steps );
 
         $this->arrayExpectation = clone $this->arrayExpectation;
+
+    }
+
+    /**
+     * @return int
+     */
+    public function count(): int {
+
+        return count( $this->steps );
 
     }
 

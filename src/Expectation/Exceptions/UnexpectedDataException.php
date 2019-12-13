@@ -20,6 +20,21 @@ use DataTraveller\Path\Path;
 class UnexpectedDataException extends \Exception {
 
     /**
+     * @var string
+     */
+    protected $actual;
+
+    /**
+     * @var string
+     */
+    protected $expected;
+
+    /**
+     * @var string|null
+     */
+    protected $at;
+
+    /**
      * @param $data
      *
      * @return string
@@ -53,16 +68,91 @@ class UnexpectedDataException extends \Exception {
 
     ) {
 
+        $this
+            ->setActual( $this->format( $data ) )
+            ->setExpected( $expected )
+            ->setAt( $path && 0 < count( $path ) ? (string) $path : null );
+
         parent::__construct( sprintf(
 
             "Unexpected data: %1\$s, expected:\n%2\$s%3\$s.",
-            $this->format( $data ),
-            $expected,
-            $path ? sprintf( "\nat: %1\$s", $path ) : '',
+            $this->getActual(),
+            $this->getExpected(),
+            $this->hasAt() ? sprintf( "\nat: %1\$s", $this->getAt() ) : '',
 
         ), 0, $previous );
 
     }
 
-}
+    /**
+     * @return string
+     */
+    public function getActual(): string {
 
+        return $this->actual;
+
+    }
+
+    /**
+     * @param string $actual
+     *
+     * @return $this
+     */
+    public function setActual( string $actual ) {
+
+        $this->actual = $actual;
+        return $this;
+
+    }
+
+    /**
+     * @return string
+     */
+    public function getExpected(): string {
+
+        return $this->expected;
+
+    }
+
+    /**
+     * @param string $expected
+     *
+     * @return $this
+     */
+    public function setExpected( string $expected ) {
+
+        $this->expected = $expected;
+        return $this;
+
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasAt(): bool {
+
+        return isset( $this->at );
+
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAt(): ?string {
+
+        return $this->at;
+    }
+
+    /**
+     * @param string|null $at
+     *
+     * @return $this
+     */
+    public function setAt( string $at = null ) {
+
+        $this->at = $at;
+        return $this;
+
+    }
+
+}

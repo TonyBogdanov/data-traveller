@@ -22,14 +22,14 @@ class MissingDataException extends \Exception {
     /**
      * MissingDataException constructor.
      *
-     * @param Path $path
+     * @param Path|null $path
      */
-    public function __construct( Path $path ) {
+    public function __construct( Path $path = null ) {
 
         parent::__construct( sprintf(
 
             'Missing data%1$s.',
-            $path ? sprintf( ' at: %1$s', $path ) : ''
+            $path && 0 < count( $path ) ? sprintf( ' at: %1$s', $path ) : ''
 
         ) );
 
