@@ -40,7 +40,7 @@ class ClosureExpectation implements ExpectationInterface {
 
         if ( ! is_object( $data ) || ! ( $data instanceof \Closure) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

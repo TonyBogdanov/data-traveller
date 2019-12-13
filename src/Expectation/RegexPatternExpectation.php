@@ -42,7 +42,7 @@ class RegexPatternExpectation implements ExpectationInterface {
 
         if ( PREG_NO_ERROR !== preg_last_error() ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

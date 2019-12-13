@@ -9,6 +9,7 @@
 
 namespace DataTraveller\Expectation\Exceptions;
 
+use DataTraveller\Expectation\ExpectationInterface;
 use DataTraveller\Path\Path;
 
 /**
@@ -20,14 +21,19 @@ use DataTraveller\Path\Path;
 class UnexpectedDataException extends \Exception {
 
     /**
-     * @var string
+     * @var ExpectationInterface
      */
-    protected $actual;
+    protected $expectation;
 
     /**
      * @var string
      */
     protected $expected;
+
+    /**
+     * @var string
+     */
+    protected $actual;
 
     /**
      * @var string|null
@@ -55,22 +61,23 @@ class UnexpectedDataException extends \Exception {
      * UnexpectedDataException constructor.
      *
      * @param $data
-     * @param string $expected
+     * @param ExpectationInterface $expectation
      * @param Path|null $path
      * @param UnexpectedDataException|null $previous
      */
     public function __construct(
 
         $data,
-        string $expected,
+        ExpectationInterface $expectation,
         Path $path = null,
         UnexpectedDataException $previous = null
 
     ) {
 
         $this
+            ->setExpectation( $expectation )
+            ->setExpected( $expectation->getType() )
             ->setActual( $this->format( $data ) )
-            ->setExpected( $expected )
             ->setAt( $path && 0 < count( $path ) ? (string) $path : null );
 
         parent::__construct( sprintf(
@@ -85,22 +92,22 @@ class UnexpectedDataException extends \Exception {
     }
 
     /**
-     * @return string
+     * @return ExpectationInterface
      */
-    public function getActual(): string {
+    public function getExpectation(): ExpectationInterface {
 
-        return $this->actual;
+        return $this->expectation;
 
     }
 
     /**
-     * @param string $actual
+     * @param ExpectationInterface $expectation
      *
      * @return $this
      */
-    public function setActual( string $actual ) {
+    public function setExpectation( ExpectationInterface $expectation ) {
 
-        $this->actual = $actual;
+        $this->expectation = $expectation;
         return $this;
 
     }
@@ -122,6 +129,27 @@ class UnexpectedDataException extends \Exception {
     public function setExpected( string $expected ) {
 
         $this->expected = $expected;
+        return $this;
+
+    }
+
+    /**
+     * @return string
+     */
+    public function getActual(): string {
+
+        return $this->actual;
+
+    }
+
+    /**
+     * @param string $actual
+     *
+     * @return $this
+     */
+    public function setActual( string $actual ) {
+
+        $this->actual = $actual;
         return $this;
 
     }

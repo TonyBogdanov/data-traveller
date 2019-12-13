@@ -40,7 +40,7 @@ class CallableExpectation implements ExpectationInterface {
 
         if ( ! is_callable( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

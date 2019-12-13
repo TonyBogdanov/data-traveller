@@ -40,7 +40,7 @@ class StringExpectation implements ExpectationInterface {
 
         if ( ! is_string( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

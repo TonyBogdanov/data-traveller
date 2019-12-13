@@ -63,7 +63,7 @@ class ListExpectation implements ExpectationInterface {
 
             } catch ( UnexpectedDataException $e ) {
 
-                throw new UnexpectedDataException( $data, $this->getType(), $path, $e );
+                throw new UnexpectedDataException( $data, $this, $path, $e );
 
             }
 

@@ -50,7 +50,7 @@ class IndexedArrayExpectation implements ExpectationInterface {
 
         if ( range( 0, $count - 1 ) !== $keys ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

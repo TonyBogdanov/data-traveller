@@ -40,7 +40,7 @@ class FloatExpectation implements ExpectationInterface {
 
         if ( ! is_float( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

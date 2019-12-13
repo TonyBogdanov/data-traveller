@@ -64,7 +64,7 @@ class NotExpectation implements ExpectationInterface {
 
         }
 
-        throw new UnexpectedDataException( $data, $this->getType(), $path );
+        throw new UnexpectedDataException( $data, $this, $path );
 
     }
 

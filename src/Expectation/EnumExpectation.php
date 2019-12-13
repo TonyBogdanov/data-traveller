@@ -67,7 +67,7 @@ class EnumExpectation implements ExpectationInterface {
 
         if ( ! in_array( $data, $this->options, true ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

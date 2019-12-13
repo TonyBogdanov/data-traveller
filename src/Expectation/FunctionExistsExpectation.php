@@ -40,7 +40,7 @@ class FunctionExistsExpectation implements ExpectationInterface {
 
         if ( ! function_exists( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

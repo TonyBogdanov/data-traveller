@@ -40,7 +40,7 @@ class NullExpectation implements ExpectationInterface {
 
         if ( ! is_null( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

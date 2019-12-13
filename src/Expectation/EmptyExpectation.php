@@ -40,7 +40,7 @@ class EmptyExpectation implements ExpectationInterface {
 
         if ( ! empty( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

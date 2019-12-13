@@ -40,7 +40,7 @@ class CountableExpectation implements ExpectationInterface {
 
         if ( ! is_countable( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

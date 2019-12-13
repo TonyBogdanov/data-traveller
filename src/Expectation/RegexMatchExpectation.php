@@ -56,7 +56,7 @@ class RegexMatchExpectation implements ExpectationInterface {
 
         if ( ! preg_match( $this->pattern, $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

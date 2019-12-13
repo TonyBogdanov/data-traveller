@@ -56,7 +56,7 @@ class ClassExpectation implements ExpectationInterface {
 
         if ( ! is_object( $data ) || ! is_a( $data, $this->name, false ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 

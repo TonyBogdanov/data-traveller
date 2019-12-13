@@ -40,7 +40,7 @@ class IntegerExpectation implements ExpectationInterface {
 
         if ( ! is_int( $data ) ) {
 
-            throw new UnexpectedDataException( $data, $this->getType(), $path );
+            throw new UnexpectedDataException( $data, $this, $path );
 
         }
 
