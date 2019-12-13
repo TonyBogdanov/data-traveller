@@ -32,7 +32,7 @@ class LowerThanExpectation implements ExpectationInterface {
      */
     public function __construct( $value ) {
 
-        $this->value = $value;
+        $this->setValue( $value );
 
     }
 
@@ -41,7 +41,7 @@ class LowerThanExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'lt( ' . $this->value . ' )';
+        return 'lt( ' . $this->getValue() . ' )';
 
     }
 
@@ -54,12 +54,33 @@ class LowerThanExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( $data >= $this->value ) {
+        if ( $data >= $this->getValue() ) {
 
             throw new UnexpectedDataException( $data, $this, $path );
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return float|int
+     */
+    public function getValue() {
+
+        return $this->value;
+
+    }
+
+    /**
+     * @param float|int $value
+     *
+     * @return $this
+     */
+    public function setValue( $value ) {
+
+        $this->value = $value;
         return $this;
 
     }

@@ -32,7 +32,7 @@ class RegexMatchExpectation implements ExpectationInterface {
      */
     public function __construct( string $pattern ) {
 
-        $this->pattern = $pattern;
+        $this->setPattern( $pattern );
 
     }
 
@@ -41,7 +41,7 @@ class RegexMatchExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'regexMatch = ' . $this->pattern;
+        return 'regexMatch = ' . $this->getPattern();
 
     }
 
@@ -54,12 +54,33 @@ class RegexMatchExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( ! preg_match( $this->pattern, $data ) ) {
+        if ( ! preg_match( $this->getPattern(), $data ) ) {
 
             throw new UnexpectedDataException( $data, $this, $path );
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return string
+     */
+    public function getPattern(): string {
+
+        return $this->pattern;
+
+    }
+
+    /**
+     * @param string $pattern
+     *
+     * @return $this
+     */
+    public function setPattern( string $pattern ) {
+
+        $this->pattern = $pattern;
         return $this;
 
     }

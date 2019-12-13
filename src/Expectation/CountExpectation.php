@@ -35,7 +35,7 @@ class CountExpectation implements ExpectationInterface {
      */
     public function __construct( ExpectationInterface $expectation ) {
 
-        $this->expectation = $expectation;
+        $this->setExpectation( $expectation );
 
     }
 
@@ -46,7 +46,7 @@ class CountExpectation implements ExpectationInterface {
 
         return
             "count (\n" .
-            $this->indent( $this->expectation->getType() ) . "\n" .
+            $this->indent( $this->getExpectation()->getType() ) . "\n" .
             ')';
 
     }
@@ -62,7 +62,7 @@ class CountExpectation implements ExpectationInterface {
 
         try {
 
-            $this->expectation->expect( count( $data ), $path );
+            $this->getExpectation()->expect( count( $data ), $path );
 
         } catch ( UnexpectedDataException $e ) {
 
@@ -70,6 +70,27 @@ class CountExpectation implements ExpectationInterface {
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return ExpectationInterface
+     */
+    public function getExpectation(): ExpectationInterface {
+
+        return $this->expectation;
+
+    }
+
+    /**
+     * @param ExpectationInterface $expectation
+     *
+     * @return $this
+     */
+    public function setExpectation( ExpectationInterface $expectation ) {
+
+        $this->expectation = $expectation;
         return $this;
 
     }

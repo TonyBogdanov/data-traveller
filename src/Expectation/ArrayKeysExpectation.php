@@ -38,8 +38,9 @@ class ArrayKeysExpectation implements ExpectationInterface {
      */
     public function __construct( ExpectationInterface $expectation, bool $sort = false ) {
 
-        $this->expectation = $expectation;
-        $this->sort = $sort;
+        $this
+            ->setExpectation( $expectation )
+            ->setSort( $sort );
 
     }
 
@@ -48,7 +49,7 @@ class ArrayKeysExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'arrayKeys ( ' . $this->expectation->getType() . ' )';
+        return 'arrayKeys ( ' . $this->getExpectation()->getType() . ' )';
 
     }
 
@@ -64,13 +65,13 @@ class ArrayKeysExpectation implements ExpectationInterface {
         try {
 
             $keys = array_keys( $data );
-            if ( $this->sort ) {
+            if ( $this->isSort() ) {
 
                 sort( $keys );
 
             }
 
-            $this->expectation->expect( $keys, $path );
+            $this->getExpectation()->expect( $keys, $path );
 
         } catch ( UnexpectedDataException $e ) {
 
@@ -78,6 +79,48 @@ class ArrayKeysExpectation implements ExpectationInterface {
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return ExpectationInterface
+     */
+    public function getExpectation(): ExpectationInterface {
+
+        return $this->expectation;
+
+    }
+
+    /**
+     * @param ExpectationInterface $expectation
+     *
+     * @return $this
+     */
+    public function setExpectation( ExpectationInterface $expectation ) {
+
+        $this->expectation = $expectation;
+        return $this;
+
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSort(): bool {
+
+        return $this->sort;
+
+    }
+
+    /**
+     * @param bool $sort
+     *
+     * @return $this
+     */
+    public function setSort( bool $sort ) {
+
+        $this->sort = $sort;
         return $this;
 
     }

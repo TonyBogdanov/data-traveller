@@ -35,7 +35,7 @@ class EnumExpectation implements ExpectationInterface {
      */
     public function __construct( array $options ) {
 
-        $this->options = array_values( $options );
+        $this->setOptions( array_values( $options ) );
 
     }
 
@@ -46,7 +46,7 @@ class EnumExpectation implements ExpectationInterface {
 
         $result = "enum (\n";
 
-        foreach ( $this->options as $option ) {
+        foreach ( $this->getOptions() as $option ) {
 
             $result .= $this->indent( json_encode( $option ) . ";\n" );
 
@@ -65,12 +65,33 @@ class EnumExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( ! in_array( $data, $this->options, true ) ) {
+        if ( ! in_array( $data, $this->getOptions(), true ) ) {
 
             throw new UnexpectedDataException( $data, $this, $path );
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return array
+     */
+    public function getOptions(): array {
+
+        return $this->options;
+
+    }
+
+    /**
+     * @param array $options
+     *
+     * @return $this
+     */
+    public function setOptions( array $options ) {
+
+        $this->options = $options;
         return $this;
 
     }

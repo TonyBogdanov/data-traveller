@@ -37,7 +37,7 @@ class MapExpectation implements ExpectationInterface {
     public function __construct( array $expectations ) {
 
         ksort( $expectations );
-        $this->expectations = $expectations;
+        $this->setExpectations( $expectations );
 
     }
 
@@ -48,7 +48,7 @@ class MapExpectation implements ExpectationInterface {
 
         $result = "map {\n";
 
-        foreach ( $this->expectations as $key => $expectation ) {
+        foreach ( $this->getExpectations() as $key => $expectation ) {
 
             $result .= $this->indent( $key . ' = ' . $expectation->getType() . ";\n" );
 
@@ -70,7 +70,7 @@ class MapExpectation implements ExpectationInterface {
         $keys = array_keys( $data );
         sort( $keys );
 
-        foreach ( $this->expectations as $key => $expectation ) {
+        foreach ( $this->getExpectations() as $key => $expectation ) {
 
             try {
 
@@ -89,6 +89,27 @@ class MapExpectation implements ExpectationInterface {
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return ExpectationInterface[]
+     */
+    public function getExpectations(): array {
+
+        return $this->expectations;
+
+    }
+
+    /**
+     * @param ExpectationInterface[] $expectations
+     *
+     * @return $this
+     */
+    public function setExpectations( array $expectations ) {
+
+        $this->expectations = $expectations;
         return $this;
 
     }

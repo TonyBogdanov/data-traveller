@@ -76,7 +76,7 @@ class UnexpectedDataException extends \Exception {
 
         $this
             ->setExpectation( $expectation )
-            ->setExpected( $expectation->getType() )
+            ->setExpected( $this->getExpectation()->getType() )
             ->setActual( $this->format( $data ) )
             ->setAt( $path && 0 < count( $path ) ? (string) $path : null );
 

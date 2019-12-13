@@ -5,43 +5,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/AndExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/AndExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayDiffExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayDiffExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayIntersectExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayIntersectExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/AssociativeArrayExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/AssociativeArrayExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/BooleanExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/BooleanExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/CallableExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/CallableExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ClassExistsExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ClassExistsExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/ClassExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ClassExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ClosureExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ClosureExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/CountExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/CountExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/CountableExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/CountableExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/EmptyExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/EmptyExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/EnumExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/EnumExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/Exceptions/UnexpectedDataException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/Exceptions/UnexpectedDataException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/FloatExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/FloatExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/FunctionExistsExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/FunctionExistsExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/GreaterThanExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/GreaterThanExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/GreaterThanOrEqualExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/GreaterThanOrEqualExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/IndexedArrayExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/IndexedArrayExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/IntegerExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/IntegerExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/IterableExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/IterableExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/ListExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ListExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/LowerThanExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/LowerThanExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/LowerThanOrEqualExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/LowerThanOrEqualExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/MapExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/MapExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/NotExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/NotExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/NullExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/NullExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/NumericExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/NumericExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ObjectExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ObjectExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/OrExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/OrExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/RegexPatternExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/RegexPatternExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ResourceExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ResourceExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ScalarExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ScalarExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/StringExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/StringExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/StringLengthExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/StringLengthExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ValueExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ValueExpectation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +157,7 @@
       <workItem from="1576221368490" duration="610000" />
       <workItem from="1576229221554" duration="317000" />
       <workItem from="1576230023187" duration="192000" />
+      <workItem from="1576230503865" duration="701000" />
     </task>
     <servers />
   </component>
@@ -202,10 +181,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="744" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1576230148679">
+    <state x="744" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1576231247727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="235" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576230148679" />
+    <state x="744" y="235" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576231247727" />
     <state x="641" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576221051476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

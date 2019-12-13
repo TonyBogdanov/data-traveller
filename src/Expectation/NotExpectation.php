@@ -32,7 +32,7 @@ class NotExpectation implements ExpectationInterface {
      */
     public function __construct( ExpectationInterface $expectation ) {
 
-        $this->expectation = $expectation;
+        $this->setExpectation( $expectation );
 
     }
 
@@ -41,7 +41,7 @@ class NotExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return sprintf( 'not ( %s )', $this->expectation->getType() );
+        return sprintf( 'not ( %s )', $this->getExpectation()->getType() );
 
     }
 
@@ -56,7 +56,7 @@ class NotExpectation implements ExpectationInterface {
 
         try {
 
-            $this->expectation->expect( $data, $path );
+            $this->getExpectation()->expect( $data, $path );
 
         } catch ( UnexpectedDataException $e ) {
 
@@ -65,6 +65,27 @@ class NotExpectation implements ExpectationInterface {
         }
 
         throw new UnexpectedDataException( $data, $this, $path );
+
+    }
+
+    /**
+     * @return ExpectationInterface
+     */
+    public function getExpectation(): ExpectationInterface {
+
+        return $this->expectation;
+
+    }
+
+    /**
+     * @param ExpectationInterface $expectation
+     *
+     * @return $this
+     */
+    public function setExpectation( ExpectationInterface $expectation ) {
+
+        $this->expectation = $expectation;
+        return $this;
 
     }
 

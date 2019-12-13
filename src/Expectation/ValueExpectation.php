@@ -32,7 +32,7 @@ class ValueExpectation implements ExpectationInterface {
      */
     public function __construct( $value ) {
 
-        $this->value = $value;
+        $this->setValue( $value );
 
     }
 
@@ -43,16 +43,16 @@ class ValueExpectation implements ExpectationInterface {
 
         switch ( true ) {
 
-            case is_float( $this->value ) && is_infinite( $this->value ):
+            case is_float( $this->getValue() ) && is_infinite( $this->getValue() ):
                 $expression = 'INF';
                 break;
 
-            case $this->value instanceof \Closure:
+            case $this->getValue() instanceof \Closure:
                 $expression = \Closure::class;
                 break;
 
             default:
-                $expression = json_encode( $this->value );
+                $expression = json_encode( $this->getValue() );
 
         }
 
@@ -75,12 +75,33 @@ class ValueExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( $this->value !== $data ) {
+        if ( $this->getValue() !== $data ) {
 
             throw new UnexpectedDataException( $data, $this, $path );
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValue() {
+
+        return $this->value;
+
+    }
+
+    /**
+     * @param mixed $value
+     *
+     * @return $this
+     */
+    public function setValue( $value ) {
+
+        $this->value = $value;
         return $this;
 
     }

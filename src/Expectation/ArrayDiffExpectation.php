@@ -41,8 +41,9 @@ class ArrayDiffExpectation implements ExpectationInterface {
      */
     public function __construct( array $compare, ExpectationInterface $expectation ) {
 
-        $this->compare = array_values( $compare );
-        $this->expectation = $expectation;
+        $this
+            ->setCompare( array_values( $compare ) )
+            ->setExpectation( $expectation );
 
     }
 
@@ -53,8 +54,8 @@ class ArrayDiffExpectation implements ExpectationInterface {
 
         return
             "arrayDiff (\n" .
-            $this->indent( json_encode( $this->compare ) ) . ";\n" .
-            $this->indent( $this->expectation->getType() ) . ";\n" .
+            $this->indent( json_encode( $this->getCompare() ) ) . ";\n" .
+            $this->indent( $this->getExpectation()->getType() ) . ";\n" .
             ')';
 
     }
@@ -70,7 +71,7 @@ class ArrayDiffExpectation implements ExpectationInterface {
 
         try {
 
-            $this->expectation->expect( array_values( array_diff( $data, $this->compare ) ), $path );
+            $this->getExpectation()->expect( array_values( array_diff( $data, $this->getCompare() ) ), $path );
 
         } catch ( UnexpectedDataException $e ) {
 
@@ -78,6 +79,48 @@ class ArrayDiffExpectation implements ExpectationInterface {
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return array
+     */
+    public function getCompare(): array {
+
+        return $this->compare;
+
+    }
+
+    /**
+     * @param array $compare
+     *
+     * @return $this
+     */
+    public function setCompare( array $compare ) {
+
+        $this->compare = $compare;
+        return $this;
+
+    }
+
+    /**
+     * @return ExpectationInterface
+     */
+    public function getExpectation(): ExpectationInterface {
+
+        return $this->expectation;
+
+    }
+
+    /**
+     * @param ExpectationInterface $expectation
+     *
+     * @return $this
+     */
+    public function setExpectation( ExpectationInterface $expectation ) {
+
+        $this->expectation = $expectation;
         return $this;
 
     }

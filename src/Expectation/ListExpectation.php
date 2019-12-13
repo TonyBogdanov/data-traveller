@@ -33,7 +33,7 @@ class ListExpectation implements ExpectationInterface {
      */
     public function __construct( ExpectationInterface $expectation ) {
 
-        $this->expectation = $expectation;
+        $this->setExpectation( $expectation );
 
     }
 
@@ -42,7 +42,7 @@ class ListExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return 'list ( ' . $this->expectation->getType() . ' )';
+        return 'list ( ' . $this->getExpectation()->getType() . ' )';
 
     }
 
@@ -59,7 +59,12 @@ class ListExpectation implements ExpectationInterface {
 
             try {
 
-                $this->expectation->expect( $item, $path ? ( clone $path )->push( new LiteralStep( $key ) ) : null );
+                $this->getExpectation()->expect(
+
+                    $item,
+                    $path ? ( clone $path )->push( new LiteralStep( $key ) ) : null
+
+                );
 
             } catch ( UnexpectedDataException $e ) {
 
@@ -69,6 +74,27 @@ class ListExpectation implements ExpectationInterface {
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return ExpectationInterface
+     */
+    public function getExpectation(): ExpectationInterface {
+
+        return $this->expectation;
+
+    }
+
+    /**
+     * @param ExpectationInterface $expectation
+     *
+     * @return $this
+     */
+    public function setExpectation( ExpectationInterface $expectation ) {
+
+        $this->expectation = $expectation;
         return $this;
 
     }

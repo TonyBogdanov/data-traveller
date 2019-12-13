@@ -43,7 +43,7 @@ class AndExpectation implements ExpectationInterface {
 
     ) {
 
-        $this->expectations = array_merge( [ $left, $right ], $extra );
+        $this->setExpectations( array_merge( [ $left, $right ], $extra ) );
 
     }
 
@@ -54,7 +54,7 @@ class AndExpectation implements ExpectationInterface {
 
         $result = "and (\n";
 
-        foreach ( $this->expectations as $expectation ) {
+        foreach ( $this->getExpectations() as $expectation ) {
 
             $result .= $this->indent( $expectation->getType() . ";\n" );
 
@@ -87,6 +87,27 @@ class AndExpectation implements ExpectationInterface {
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return ExpectationInterface[]
+     */
+    public function getExpectations(): array {
+
+        return $this->expectations;
+
+    }
+
+    /**
+     * @param ExpectationInterface[] $expectations
+     *
+     * @return $this
+     */
+    public function setExpectations( array $expectations ) {
+
+        $this->expectations = $expectations;
         return $this;
 
     }

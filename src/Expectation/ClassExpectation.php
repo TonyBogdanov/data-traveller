@@ -32,7 +32,7 @@ class ClassExpectation implements ExpectationInterface {
      */
     public function __construct( string $name ) {
 
-        $this->name = $name;
+        $this->setName( $name );
 
     }
 
@@ -41,7 +41,7 @@ class ClassExpectation implements ExpectationInterface {
      */
     public function getType(): string {
 
-        return $this->name;
+        return $this->getName();
 
     }
 
@@ -54,12 +54,33 @@ class ClassExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        if ( ! is_object( $data ) || ! is_a( $data, $this->name, false ) ) {
+        if ( ! is_object( $data ) || ! is_a( $data, $this->getName(), false ) ) {
 
             throw new UnexpectedDataException( $data, $this, $path );
 
         }
 
+        return $this;
+
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string {
+
+        return $this->name;
+
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function setName( string $name ) {
+
+        $this->name = $name;
         return $this;
 
     }

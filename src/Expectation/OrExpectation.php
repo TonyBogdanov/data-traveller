@@ -43,7 +43,7 @@ class OrExpectation implements ExpectationInterface {
 
     ) {
 
-        $this->expectations = array_merge( [ $left, $right ], $extra );
+        $this->setExpectations( array_merge( [ $left, $right ], $extra ) );
 
     }
 
@@ -54,7 +54,7 @@ class OrExpectation implements ExpectationInterface {
 
         $result = "or (\n";
 
-        foreach ( $this->expectations as $expectation ) {
+        foreach ( $this->getExpectations() as $expectation ) {
 
             $result .= $this->indent( $expectation->getType() . ";\n" );
 
@@ -73,7 +73,7 @@ class OrExpectation implements ExpectationInterface {
      */
     public function expect( $data, Path $path = null ) {
 
-        foreach ( $this->expectations as $expectation ) {
+        foreach ( $this->getExpectations() as $expectation ) {
 
             try {
 
@@ -85,6 +85,27 @@ class OrExpectation implements ExpectationInterface {
         }
 
         throw new UnexpectedDataException( $data, $this, $path );
+
+    }
+
+    /**
+     * @return ExpectationInterface[]
+     */
+    public function getExpectations(): array {
+
+        return $this->expectations;
+
+    }
+
+    /**
+     * @param ExpectationInterface[] $expectations
+     *
+     * @return $this
+     */
+    public function setExpectations( array $expectations ) {
+
+        $this->expectations = $expectations;
+        return $this;
 
     }
 
