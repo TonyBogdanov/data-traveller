@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/AndExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/AndExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayDiffExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayDiffExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayIntersectExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayIntersectExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ArrayKeysExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ClassExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ClassExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/CountExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/CountExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/EnumExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/EnumExpectation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Expectation/Exceptions/UnexpectedDataException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/Exceptions/UnexpectedDataException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/GreaterThanExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/GreaterThanExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/GreaterThanOrEqualExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/GreaterThanOrEqualExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/ListExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/ListExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/LowerThanExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/LowerThanExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/LowerThanOrEqualExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/LowerThanOrEqualExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/MapExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/MapExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/NotExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/NotExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/OrExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/OrExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Expectation/RegexMatchExpectation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +141,7 @@
       <workItem from="1576229221554" duration="317000" />
       <workItem from="1576230023187" duration="192000" />
       <workItem from="1576230503865" duration="701000" />
+      <workItem from="1576316659997" duration="66000" />
     </task>
     <servers />
   </component>

@@ -63,14 +63,14 @@ class UnexpectedDataException extends \Exception {
      * @param $data
      * @param ExpectationInterface $expectation
      * @param Path|null $path
-     * @param UnexpectedDataException|null $previous
+     * @param \Throwable|null $previous
      */
     public function __construct(
 
         $data,
         ExpectationInterface $expectation,
         Path $path = null,
-        UnexpectedDataException $previous = null
+        \Throwable $previous = null
 
     ) {
 
