@@ -155,4 +155,46 @@ class Path implements \Countable {
 
     }
 
+    /**
+     * @return StepInterface[]
+     */
+    public function getSteps(): array {
+
+        return $this->steps;
+
+    }
+
+    /**
+     * @param StepInterface[] $steps
+     *
+     * @return $this
+     */
+    public function setSteps( array $steps ) {
+
+        $this->steps = $steps;
+        return $this;
+
+    }
+
+    /**
+     * @return ArrayExpectation
+     */
+    public function getArrayExpectation(): ArrayExpectation {
+
+        return $this->arrayExpectation;
+
+    }
+
+    /**
+     * @param ArrayExpectation $arrayExpectation
+     *
+     * @return $this
+     */
+    public function setArrayExpectation( ArrayExpectation $arrayExpectation ) {
+
+        $this->arrayExpectation = $arrayExpectation;
+        return $this;
+
+    }
+
 }

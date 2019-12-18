@@ -41,7 +41,7 @@ class DataTraveller {
     public function get( string $path, $data, ExpectationInterface $expectation = null ) {
 
         $path = Path::parse( $path, $this->isDisableRegexSteps() );
-        $value = $path->get( $data, new Path() );
+        $value = $path->get( $data );
 
         if ( isset( $expectation ) ) {
 
