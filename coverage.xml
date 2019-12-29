@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1577627374">
+  <project timestamp="1577627374">
+    <package name="DataTraveller">
+      <file name="/home/runner/work/data-traveller/data-traveller/src/DataTraveller.php">
+        <class name="DataTraveller\DataTraveller" namespace="DataTraveller" fullPackage="DataTraveller" package="DataTraveller">
+          <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
+        </class>
+        <line num="41" type="method" name="get" visibility="public" complexity="2" crap="2" count="30"/>
+        <line num="43" type="stmt" count="30"/>
+        <line num="44" type="stmt" count="29"/>
+        <line num="46" type="stmt" count="28"/>
+        <line num="48" type="stmt" count="28"/>
+        <line num="52" type="stmt" count="27"/>
+        <line num="59" type="method" name="isDisableRegexSteps" visibility="public" complexity="1" crap="1" count="30"/>
+        <line num="61" type="stmt" count="30"/>
+        <line num="70" type="method" name="setDisableRegexSteps" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <metrics loc="77" ncloc="44" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
+      </file>
+    </package>
+    <package name="DataTraveller\Exceptions">
+      <file name="/home/runner/work/data-traveller/data-traveller/src/Exceptions/MissingDataException.php">
+        <class name="DataTraveller\Exceptions\MissingDataException" namespace="DataTraveller\Exceptions" fullPackage="DataTraveller" package="DataTraveller">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <metrics loc="38" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+    </package>
+    <package name="DataTraveller\Path\Exceptions">
+      <file name="/home/runner/work/data-traveller/data-traveller/src/Path/Exceptions/InvalidPathException.php">
+        <class name="DataTraveller\Path\Exceptions\InvalidPathException" namespace="DataTraveller\Path\Exceptions" fullPackage="DataTraveller" package="DataTraveller">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="20" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="DataTraveller\Path">
+      <file name="/home/runner/work/data-traveller/data-traveller/src/Path/Parser.php">
+        <class name="DataTraveller\Path\Parser" namespace="DataTraveller\Path" fullPackage="DataTraveller" package="DataTraveller">
+          <metrics complexity="8" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="23" coveredelements="23"/>
+        </class>
+        <line num="42" type="method" name="parseStep" visibility="protected" complexity="2" crap="2" count="61"/>
+        <line num="44" type="stmt" count="61"/>
+        <line num="46" type="stmt" count="50"/>
+        <line num="47" type="stmt" count="50"/>
+        <line num="48" type="stmt" count="50"/>
+        <line num="57" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="70"/>
+        <line num="61" type="stmt" count="70"/>
+        <line num="65" type="stmt" count="70"/>
+        <line num="67" type="stmt" count="69"/>
+        <line num="71" type="stmt" count="70"/>
+        <line num="73" type="stmt" count="70"/>
+        <line num="75" type="stmt" count="70"/>
+        <line num="83" type="method" name="parse" visibility="public" complexity="4" crap="4" count="70"/>
+        <line num="85" type="stmt" count="70"/>
+        <line num="86" type="stmt" count="70"/>
+        <line num="88" type="stmt" count="70"/>
+        <line num="90" type="stmt" count="61"/>
+        <line num="91" type="stmt" count="50"/>
+        <line num="93" type="stmt" count="40"/>
+        <line num="97" type="stmt" count="46"/>
+        <line num="98" type="stmt" count="46"/>
+        <line num="100" type="stmt" count="5"/>
+        <line num="106" type="stmt" count="49"/>
+        <metrics loc="110" ncloc="78" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="23" coveredelements="23"/>
+      </file>
+      <file name="/home/runner/work/data-traveller/data-traveller/src/Path/Path.php">
+        <class name="DataTraveller\Path\Path" namespace="DataTraveller\Path" fullPackage="DataTraveller" package="DataTraveller">
+          <metrics complexity="17" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="32" elements="43" coveredelements="43"/>
+        </class>
+        <line num="45" type="method" name="parse" visibility="public" complexity="2" crap="2" count="45"/>
+        <line num="49" type="stmt" count="45"/>
+        <line num="51" type="stmt" count="5"/>
+        <line num="53" type="stmt" count="5"/>
+        <line num="64" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="40"/>
+        <line num="66" type="stmt" count="40"/>
+        <line num="67" type="stmt" count="40"/>
+        <line num="69" type="stmt" count="40"/>
+        <line num="74" type="method" name="__toString" visibility="public" complexity="2" crap="2" count="32"/>
+        <line num="78" type="stmt" count="31"/>
+        <line num="80" type="stmt" count="32"/>
+        <line num="84" type="method" name="__clone" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="88" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="99" type="method" name="count" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="101" type="stmt" count="2"/>
+        <line num="113" type="method" name="get" visibility="public" complexity="5" crap="5" count="32"/>
+        <line num="115" type="stmt" count="32"/>
+        <line num="117" type="stmt" count="30"/>
+        <line num="121" type="stmt" count="31"/>
+        <line num="123" type="stmt" count="31"/>
+        <line num="127" type="stmt" count="31"/>
+        <line num="129" type="stmt" count="31"/>
+        <line num="130" type="stmt" count="31"/>
+        <line num="132" type="stmt" count="31"/>
+        <line num="134" type="stmt" count="30"/>
+        <line num="136" type="stmt" count="29"/>
+        <line num="142" type="stmt" count="2"/>
+        <line num="151" type="method" name="push" visibility="public" complexity="1" crap="1" count="32"/>
+        <line num="153" type="stmt" count="32"/>
+        <line num="154" type="stmt" count="32"/>
+        <line num="161" type="method" name="getSteps" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="163" type="stmt" count="2"/>
+        <line num="172" type="method" name="setSteps" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="174" type="stmt" count="1"/>
+        <line num="175" type="stmt" count="1"/>
+        <line num="182" type="method" name="getArrayExpectation" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="184" type="stmt" count="2"/>
+        <line num="193" type="method" name="setArrayExpectation" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="195" type="stmt" count="1"/>
+        <line num="196" type="stmt" count="1"/>
+        <metrics loc="200" ncloc="135" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="32" elements="43" coveredelements="43"/>
+      </file>
+    </package>
+    <package name="DataTraveller\Path\Step">
+      <file name="/home/runner/work/data-traveller/data-traveller/src/Path/Step/LiteralStep.php">
+        <class name="DataTraveller\Path\Step\LiteralStep" namespace="DataTraveller\Path\Step" fullPackage="DataTraveller" package="DataTraveller">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
+        </class>
+        <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="53"/>
+        <line num="32" type="stmt" count="53"/>
+        <line num="34" type="stmt" count="53"/>
+        <line num="39" type="method" name="__toString" visibility="public" complexity="1" crap="1" count="34"/>
+        <line num="41" type="stmt" count="34"/>
+        <line num="50" type="method" name="expect" visibility="public" complexity="1" crap="1" count="31"/>
+        <line num="52" type="stmt" count="31"/>
+        <metrics loc="56" ncloc="28" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/home/runner/work/data-traveller/data-traveller/src/Path/Step/RegexStep.php">
+        <class name="DataTraveller\Path\Step\RegexStep" namespace="DataTraveller\Path\Step" fullPackage="DataTraveller" package="DataTraveller">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
+        </class>
+        <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="32" type="stmt" count="13"/>
+        <line num="34" type="stmt" count="13"/>
+        <line num="39" type="method" name="__toString" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="41" type="stmt" count="5"/>
+        <line num="50" type="method" name="expect" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="52" type="stmt" count="3"/>
+        <metrics loc="56" ncloc="28" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
+      </file>
+    </package>
+    <file name="/home/runner/work/data-traveller/data-traveller/src/Path/Step/StepInterface.php">
+      <metrics loc="32" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <metrics files="8" loc="589" ncloc="354" classes="6" methods="24" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="72" elements="96" coveredelements="96"/>
+  </project>
+</coverage>
