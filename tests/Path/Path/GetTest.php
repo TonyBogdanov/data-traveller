@@ -9,7 +9,7 @@
 
 namespace Tests\DataTraveller\Path\Path;
 
-use DataTraveller\Expectation\Exceptions\MissingDataException;
+use DataTraveller\Exceptions\MissingDataException;
 use DataTraveller\Path\Path;
 use PHPUnit\Framework\TestCase;
 

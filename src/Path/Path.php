@@ -9,9 +9,9 @@
 
 namespace DataTraveller\Path;
 
-use DataTraveller\Expectation\ArrayExpectation;
-use DataTraveller\Expectation\Exceptions\MissingDataException;
-use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
+use DataExpectation\ArrayExpectation;
+use DataExpectation\Exceptions\UnexpectedDataException;
+use DataTraveller\Exceptions\MissingDataException;
 use DataTraveller\Path\Exceptions\InvalidPathException;
 use DataTraveller\Path\Step\LiteralStep;
 use DataTraveller\Path\Step\StepInterface;

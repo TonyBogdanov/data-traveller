@@ -9,27 +9,27 @@
 
 namespace Tests\DataTraveller\DataTraveller;
 
+use DataExpectation\AndExpectation;
+use DataExpectation\ArrayExpectation;
+use DataExpectation\BooleanExpectation;
+use DataExpectation\CallableExpectation;
+use DataExpectation\ClassExpectation;
+use DataExpectation\ClosureExpectation;
+use DataExpectation\CountableExpectation;
+use DataExpectation\EmptyExpectation;
+use DataExpectation\Exceptions\UnexpectedDataException;
+use DataExpectation\FloatExpectation;
+use DataExpectation\IntegerExpectation;
+use DataExpectation\IterableExpectation;
+use DataExpectation\NotExpectation;
+use DataExpectation\NullExpectation;
+use DataExpectation\NumericExpectation;
+use DataExpectation\ObjectExpectation;
+use DataExpectation\ResourceExpectation;
+use DataExpectation\ScalarExpectation;
+use DataExpectation\StringExpectation;
 use DataTraveller\DataTraveller;
-use DataTraveller\Expectation\AndExpectation;
-use DataTraveller\Expectation\ArrayExpectation;
-use DataTraveller\Expectation\BooleanExpectation;
-use DataTraveller\Expectation\CallableExpectation;
-use DataTraveller\Expectation\ClassExpectation;
-use DataTraveller\Expectation\ClosureExpectation;
-use DataTraveller\Expectation\CountableExpectation;
-use DataTraveller\Expectation\EmptyExpectation;
-use DataTraveller\Expectation\Exceptions\MissingDataException;
-use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
-use DataTraveller\Expectation\FloatExpectation;
-use DataTraveller\Expectation\IntegerExpectation;
-use DataTraveller\Expectation\IterableExpectation;
-use DataTraveller\Expectation\NotExpectation;
-use DataTraveller\Expectation\NullExpectation;
-use DataTraveller\Expectation\NumericExpectation;
-use DataTraveller\Expectation\ObjectExpectation;
-use DataTraveller\Expectation\ResourceExpectation;
-use DataTraveller\Expectation\ScalarExpectation;
-use DataTraveller\Expectation\StringExpectation;
+use DataTraveller\Exceptions\MissingDataException;
 use DataTraveller\Path\Exceptions\InvalidPathException;
 use PHPUnit\Framework\TestCase;
 

@@ -9,9 +9,9 @@
 
 namespace DataTraveller;
 
-use DataTraveller\Expectation\Exceptions\MissingDataException;
-use DataTraveller\Expectation\Exceptions\UnexpectedDataException;
-use DataTraveller\Expectation\ExpectationInterface;
+use DataExpectation\Exceptions\UnexpectedDataException;
+use DataExpectation\ExpectationInterface;
+use DataTraveller\Exceptions\MissingDataException;
 use DataTraveller\Path\Exceptions\InvalidPathException;
 use DataTraveller\Path\Path;
 

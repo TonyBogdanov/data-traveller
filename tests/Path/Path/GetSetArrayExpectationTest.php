@@ -9,7 +9,7 @@
 
 namespace Tests\DataTraveller\Path\Path;
 
-use DataTraveller\Expectation\ArrayExpectation;
+use DataExpectation\ArrayExpectation;
 use DataTraveller\Path\Path;
 use PHPUnit\Framework\TestCase;
 

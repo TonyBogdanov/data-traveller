@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace DataTraveller\Expectation\Exceptions;
+namespace DataTraveller\Exceptions;
 
 use DataTraveller\Path\Path;
 
 /**
  * Class MissingDataException
  *
- * @package DataTraveller\Expectation\Exceptions
+ * @package DataTraveller\Exceptions
  * @author Tony Bogdanov <tonybogdanov@gmail.com>
  */
 class MissingDataException extends \Exception {
@@ -36,4 +36,3 @@ class MissingDataException extends \Exception {
     }
 
 }
-
