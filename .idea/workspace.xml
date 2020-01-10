@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="337dd4c7-3476-4800-9ac6-cc894a39c2f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/data-traveller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data-traveller.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/run-tests-with-coverage.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/run-tests-with-coverage.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +152,7 @@
       <workItem from="1577730923339" duration="39000" />
       <workItem from="1577732563563" duration="2000" />
       <workItem from="1578660249851" duration="238000" />
+      <workItem from="1578660569438" duration="67000" />
     </task>
     <servers />
   </component>
