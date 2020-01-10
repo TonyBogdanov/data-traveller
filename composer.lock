@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ee739a0f834d1ed5f825272dc45a38b",
+    "content-hash": "4cf04f12f13b1736a44eee8fd7599451",
     "packages": [
         {
             "name": "nette/tokenizer",
@@ -1904,5 +1904,7 @@
         "php": "^7.3",
         "ext-json": "*"
     },
-    "platform-dev": []
+    "platform-dev": {
+        "ext-gd": "^7.3"
+    }
 }
