@@ -1,4 +1,4 @@
-name: CI
+name: build
 
 on:
     push:
@@ -7,10 +7,26 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ${{ matrix.operating-system }}
+
+        strategy:
+            matrix:
+                php-versions: [ '7.3', '7.4' ]
+                operating-system: [ ubuntu-latest, windows-latest, macOS-latest ]
+
+        name: PHP ${{ matrix.php-versions }} on ${{ matrix.operating-system }}
 
         steps:
-            - uses: actions/checkout@v1
+            - name: Checkout
+              uses: actions/checkout@v1
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v1
+              with:
+                  php-version: ${{ matrix.php-versions }}
+                  extensions: mbstring, json
+                  ini-values: memory_limit=2G
+                  coverage: xdebug
 
             - name: Validate composer
               run: composer validate
@@ -19,9 +35,41 @@ jobs:
               run: composer install --prefer-dist --no-progress --no-suggest
 
             - name: Run test suite
-              run: |
-                  chmod +x ./bin/run-tests-with-coverage.sh
-                  ./bin/run-tests-with-coverage.sh
+              run: ./vendor/bin/phpunit --coverage-html=./coverage --coverage-clover ./coverage/coverage.xml
+
+            - name: Generate coverage badge
+              run: ./vendor/bin/php-coverage-badger ./coverage/coverage.xml ./coverage/coverage.svg
+
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v1
+              with:
+                  name: coverage
+                  path: coverage
+
+    coverage:
+        needs: [ build ]
+        runs-on: ubuntu-latest
+
+        name: Generate coverage
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v1
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v1
+              with:
+                  php-version: 7.3
+                  ini-values: memory_limit=2G
+                  extensions: mbstring
+
+            - name: Download artifacts
+              uses: actions/download-artifact@v1
+              with:
+                  name: coverage
+
+            - name: Fix coverage files
+              run: php ./bin/fix-coverage.php
 
             - name: Publish coverage results
               uses: JamesIves/github-pages-deploy-action@releases/v3
