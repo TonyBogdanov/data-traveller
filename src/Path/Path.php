@@ -16,6 +16,7 @@ use DataTraveller\Path\Exceptions\InvalidPathException;
 use DataTraveller\Path\Step\LiteralStep;
 use DataTraveller\Path\Step\StepInterface;
 use Nette\Tokenizer\Exception;
+use SebastianBergmann\Timer\RuntimeException;
 
 /**
  * Class Path
@@ -63,7 +64,30 @@ class Path implements \Countable {
      */
     public function __construct( array $steps = [] ) {
 
-        $this->steps = $steps;
+        $this->steps = array_map( function ( $step ): StepInterface {
+
+            if ( $step instanceof StepInterface ) {
+
+                return $step;
+
+            }
+
+            if ( is_string( $step ) ) {
+
+                return new LiteralStep( $step );
+
+            }
+
+            throw new RuntimeException( sprintf(
+
+                'Invalid path step, expected a string or an instance of %1$s, got %2$s instead.',
+                StepInterface::class,
+                is_object( $step ) ? get_class( $step ) : gettype( $step )
+
+            ) );
+
+        }, $steps );
+
         $this->arrayExpectation = new ArrayExpectation();
 
     }
