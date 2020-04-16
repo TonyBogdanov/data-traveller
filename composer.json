@@ -26,5 +26,10 @@
             "DataTraveller\\": "src/",
             "Tests\\DataTraveller\\": "tests/"
         }
+    },
+    "config": {
+        "platform": {
+            "php": "7.3"
+        }
     }
 }
