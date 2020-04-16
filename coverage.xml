@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1587040276">
-  <project timestamp="1587040276">
+<coverage generated="1587040538">
+  <project timestamp="1587040538">
     <package name="DataTraveller">
       <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/DataTraveller.php">
         <class name="DataTraveller\DataTraveller" namespace="DataTraveller" fullPackage="DataTraveller" package="DataTraveller">
