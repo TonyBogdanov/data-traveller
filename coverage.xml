@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583835140">
-  <project timestamp="1583835140">
+<coverage generated="1587040276">
+  <project timestamp="1587040276">
     <package name="DataTraveller">
-      <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/DataTraveller.php">
+      <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/DataTraveller.php">
         <class name="DataTraveller\DataTraveller" namespace="DataTraveller" fullPackage="DataTraveller" package="DataTraveller">
           <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
         </class>
@@ -21,7 +21,7 @@
       </file>
     </package>
     <package name="DataTraveller\Exceptions">
-      <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/Exceptions/MissingDataException.php">
+      <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/Exceptions/MissingDataException.php">
         <class name="DataTraveller\Exceptions\MissingDataException" namespace="DataTraveller\Exceptions" fullPackage="DataTraveller" package="DataTraveller">
           <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
         </class>
@@ -34,7 +34,7 @@
       </file>
     </package>
     <package name="DataTraveller\Path\Exceptions">
-      <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/Path/Exceptions/InvalidPathException.php">
+      <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/Path/Exceptions/InvalidPathException.php">
         <class name="DataTraveller\Path\Exceptions\InvalidPathException" namespace="DataTraveller\Path\Exceptions" fullPackage="DataTraveller" package="DataTraveller">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
@@ -42,7 +42,7 @@
       </file>
     </package>
     <package name="DataTraveller\Path">
-      <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/Path/Parser.php">
+      <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/Path/Parser.php">
         <class name="DataTraveller\Path\Parser" namespace="DataTraveller\Path" fullPackage="DataTraveller" package="DataTraveller">
           <metrics complexity="8" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="23" coveredelements="23"/>
         </class>
@@ -71,7 +71,7 @@
         <line num="106" type="stmt" count="49"/>
         <metrics loc="110" ncloc="78" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="23" coveredelements="23"/>
       </file>
-      <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/Path/Path.php">
+      <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/Path/Path.php">
         <class name="DataTraveller\Path\Path" namespace="DataTraveller\Path" fullPackage="DataTraveller" package="DataTraveller">
           <metrics complexity="20" methods="11" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="34" elements="51" coveredelements="44"/>
         </class>
@@ -130,7 +130,7 @@
       </file>
     </package>
     <package name="DataTraveller\Path\Step">
-      <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/Path/Step/LiteralStep.php">
+      <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/Path/Step/LiteralStep.php">
         <class name="DataTraveller\Path\Step\LiteralStep" namespace="DataTraveller\Path\Step" fullPackage="DataTraveller" package="DataTraveller">
           <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
         </class>
@@ -143,7 +143,7 @@
         <line num="52" type="stmt" count="31"/>
         <metrics loc="56" ncloc="28" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
       </file>
-      <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/Path/Step/RegexStep.php">
+      <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/Path/Step/RegexStep.php">
         <class name="DataTraveller\Path\Step\RegexStep" namespace="DataTraveller\Path\Step" fullPackage="DataTraveller" package="DataTraveller">
           <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
         </class>
@@ -157,7 +157,7 @@
         <metrics loc="56" ncloc="28" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="7" coveredelements="7"/>
       </file>
     </package>
-    <file name="/Users/runner/runners/2.165.2/work/data-traveller/data-traveller/src/Path/Step/StepInterface.php">
+    <file name="/Users/runner/runners/2.169.0/work/data-traveller/data-traveller/src/Path/Step/StepInterface.php">
       <metrics loc="32" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <metrics files="8" loc="613" ncloc="378" classes="6" methods="24" coveredmethods="23" conditionals="0" coveredconditionals="0" statements="80" coveredstatements="74" elements="104" coveredelements="97"/>
